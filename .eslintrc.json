@@ -4,9 +4,5 @@
   "env": {
     "browser": true,
     "node": true
-  },
-  "rules": {
-    "no-console": "off",
-    "react/jsx-filename-extension": "off"
   }
 }
