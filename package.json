@@ -1,7 +1,7 @@
 {
   "name": "personal-site",
   "version": "0.0.1",
-  "description": "Personal portfolio website built with React, Node.js, Express and Webpack, using ESLint, Babel, and Nodemon",
+  "description": "Personal portfolio website built with React, Bootstrap, and Express.",
   "main": "src/server/index.js",
   "scripts": {
     "build": "webpack --mode production",
@@ -14,7 +14,10 @@
   "license": "ISC",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "bootstrap": "4.3.1",
     "express": "^4.16.3",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.7",
     "react": "^16.5.2",
     "react-dom": "^16.5.2"
   },
