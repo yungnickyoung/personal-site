@@ -10,7 +10,7 @@ import React from 'react';
  */
 export default function Card(props) {
   return (
-    <div className="card" style={{maxWidth: '18rem'}}>
+    <div className="card">
       <img src={props.image} className="card-img-top" alt={props.alt} />
       <div className="card-body">
         <h5 className="card-title">{props.cardTitle}</h5>
