@@ -51,6 +51,11 @@
     font-weight: 500;
 }
 
+.splash .sub-text .highlight {
+    color: #748d8a;
+    font-weight: 300;
+}
+
 .splash .btn {
     font-family: 'Rubik', sans-serif;
 }

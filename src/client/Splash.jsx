@@ -12,15 +12,10 @@ export default class Splash extends Component {
           <div className="splash">
             <div className="row align-items-center justify-content-center height-100">
               <div className="col">
-                <h1 className="welcome-text">Hi, my name is <span className="highlight">Nicholas Young</span></h1>
-                <h1 className="sub-text">I'm a full-stack web developer.</h1>
-                <br />
-                <a role="button" className="btn btn-primary btn-lg" href="#projects">See my work</a>
-                <br />
-                <br />
-                <br />
-                <br />
-                <center><SemipolarSpinner color="#748d8a"	size="200" animationDuration="20000" /></center>
+                <h1 className="welcome-text">Hi, my name is <span className="highlight">Nick Young</span></h1>
+                <h1 className="sub-text">I'm a <span className="highlight">full-stack</span> web &amp; software developer</h1>
+                <a role="button" className="my-5 btn btn-primary btn-lg" href="#projects">See my work</a>
+                <center><SemipolarSpinner className="my-2" color="#748d8a"	size={200} animationDuration={20000} /></center>
               </div>
             </div>
           </div>

@@ -1,0 +1,9 @@
+.nav-link.menu-item {
+    color: rgba(255,255,255,.9) !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 100%;
+}
+
+.nav-link.menu-item:hover {
+    color: #748d8a !important;
+}
