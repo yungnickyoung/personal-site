@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import SemipolarSpinner from '@bit/bondz.react-epic-spinners.semipolar-spinner';
 import ScrollableAnchor from 'react-scrollable-anchor'
-import './splash.css';
+import './css/splash.css';
+import './css/sass.css';
 
 export default class Splash extends Component {
   render() {
@@ -10,12 +12,15 @@ export default class Splash extends Component {
           <div className="splash">
             <div className="row align-items-center justify-content-center height-100">
               <div className="col">
-                <h1 className="hi">welcome</h1>
+                <h1 className="welcome-text">Hi, my name is <span className="highlight">Nicholas Young</span></h1>
+                <h1 className="sub-text">I'm a full-stack web developer.</h1>
                 <br />
-                <h1 className="welcome-text">my name is <span className="highlight">nick young</span></h1>
-                <h1 className="welcome-text">im a software developer</h1>
+                <a role="button" className="btn btn-primary btn-lg" href="#projects">See my work</a>
                 <br />
-                <a role="button" className="btn btn-outline-danger btn-lg" style={{transition: "all 2s"}} href="#projects">peep my shit</a>
+                <br />
+                <br />
+                <br />
+                <center><SemipolarSpinner color="#748d8a"	size="200" animationDuration="20000" /></center>
               </div>
             </div>
           </div>

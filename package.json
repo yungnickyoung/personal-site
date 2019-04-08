@@ -6,17 +6,20 @@
   "scripts": {
     "build": "webpack --mode production",
     "start": "npm run build && node src/server/index.js",
+    "sass:compile": "node-sass --watch src/client/sass/sass.scss -o src/client/css/",
     "dev-client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
     "dev-server": "nodemon src/server/index.js",
-    "dev": "concurrently \"npm run dev-server\" \"npm run dev-client\""
+    "dev": "concurrently \"npm run dev-server\" \"npm run dev-client\" \"npm run sass:compile\""
   },
   "author": "Nicholas Young",
   "license": "ISC",
   "dependencies": {
+    "@bit/bondz.react-epic-spinners.semipolar-spinner": "^0.3.0",
     "babel-polyfill": "^6.26.0",
     "bootstrap": "4.3.1",
     "express": "^4.16.3",
     "jquery": "^3.3.1",
+    "node-sass": "^4.11.0",
     "popper.js": "^1.14.7",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
