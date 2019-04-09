@@ -5,5 +5,15 @@
 }
 
 .nav-link.menu-item:hover {
-    color: #748d8a !important;
+    color: #48c08c !important;
+    cursor: pointer;
+}
+
+.nav-link.menu-item.active {
+    color: #48c08c !important;
+}
+
+.nav-link.icon:hover {
+    color: #ffffff !important;
+    cursor: pointer;
 }
