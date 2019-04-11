@@ -1,5 +1,6 @@
 .card-base {
-    background-color: #d8e3e2 !important;
+    /* background-color: #d8e3e2 !important; */
+    background-color: #000000 !important;
 }
 
 .card-image {
@@ -9,7 +10,7 @@
 }
 
 .image-hover {
-    opacity: 0 !important;
+    opacity: .2 !important;
 }
 
 .card-content {
@@ -31,7 +32,8 @@
     line-height: 150%;
     font-family: 'Rubik', sans-serif;
     font-size: 1.5rem;
-    color: #1c2026;
+    font-weight: 700;
+    color: #d8e3e2;
     margin-bottom: 0px !important;
 }
 
@@ -41,5 +43,10 @@
     font-family: 'Rubik', sans-serif;
     font-size: 1rem;
     color: #48c08c;
+}
+
+.card-content .btn {
+    font-family: 'Rubik', sans-serif;
+    color: white !important;
 }
 

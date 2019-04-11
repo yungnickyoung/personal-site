@@ -12,7 +12,7 @@ const styles = {
     maxWidth: 345,
   },
   media: {
-    height: 180,
+    height: 300,
   },
 };
 
@@ -63,12 +63,17 @@ class ProjectCard extends Component {
         <CardActionArea>
           <CardMedia className={classes.media + " " + imageClass}  image={this.props.image} title={this.props.alt} onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave}/>
             <div className={contentClass + " px-0"} onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave}>
-              <div className="card-title">{this.props.cardTitle}</div>
+              <div className="px-2 card-title">{this.props.cardTitle}</div>
               {/* <div className="container-fluid px-2">
                 <div className="row no-gutters px-0"> */}
-                  {this.props.tools.map((tool, i) => <span className="project-tool px-2">{tool}</span>)}
+                  <div className="d-flex flex-row justify-content-center mx-2" style={{flexWrap: 'wrap'}}>
+                  {this.props.tools.map((tool, i) => <div className="project-tool px-2 py-1" style={{display: 'inline'}}>{tool}</div>)}
+
+                    {/* <ul style={{listStyle: 'none', margin: '0', padding: '0'}}>{this.props.tools.map((tool, i) => <li className="project-tool px-2" style={{display: 'inline', flexWrap: 'wrap'}}>{tool}</li>)}</ul> */}
+                  </div>
               {/* </div>
             </div> */}
+              <div><a role="button" className="mt-4 btn btn-primary">Learn more</a></div>
             </div>
         </CardActionArea>
       </Card>

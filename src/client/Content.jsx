@@ -5,14 +5,19 @@ import SectionTitle from './SectionTitle';
 export default class Content extends Component {
   render() {
     return (
-      <div className="container" id="projects" style={{ backgroundColor: 'white' }}> 
+      <div className="container" style={{ backgroundColor: 'white', position: 'relative' }}> 
+      <div id="projects" style={{position: 'absolute', top: '-66px', left: '0'}}></div>
 
-        {/* TODO - EXTRACT THIS OFFSET INTO COMPONENT? */}
-        <div style={{paddingTop: "3.7rem"}}></div>
-        <div className="hidden-lg-up" style={{paddingTop: "2.3rem"}}></div>
-
-        <SectionTitle text="Projects" />
-        <CardList />
+        <div className="row justify-content-center">
+          <div className="col justify-content-center text-center">
+            <SectionTitle text="My Projects" />
+          </div>
+        </div>
+        <div className="row ">
+          <div className="col">
+            <CardList />
+          </div>
+        </div>
         <br />
         <br />
         <br />
