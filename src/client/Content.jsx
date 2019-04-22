@@ -6,7 +6,7 @@ export default class Content extends Component {
   render() {
     return (
       <div className="container" style={{ backgroundColor: 'white', position: 'relative' }}> 
-      <div id="projects" style={{position: 'absolute', top: '-66px', left: '0'}}></div>
+        <div id="projects" style={{position: 'absolute', top: '-66px', left: '0'}}></div>
 
         <div className="row justify-content-center">
           <div className="col justify-content-center text-center">
