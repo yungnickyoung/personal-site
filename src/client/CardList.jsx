@@ -14,7 +14,7 @@ export default class CardList extends Component {
             <ProjectCard image={PersonalSiteImage} alt="Personal Website" cardTitle="Personal Website" tools={['Bootstrap', 'React', 'Node', 'Express', 'AWS']} cardDesc="Personal portfolio website built with React.js + Bootstrap on the frontend and Node.js + Express on the backend." projectUrl="https://github.com/yungnickyoung/personal-site" />
           </div>
           <div className="col-12 col-md-6 col-lg-4 my-2">
-            <ProjectCard image={ReactImage} alt="JIST!" cardTitle="JIST! [WIP]" tools={['React Native', 'Flask', 'JavaScript']} cardDesc="Mobile app that uses NLP TextRank algorithm to create summaries of news articles from various news sources. Powered by React Native with Flask." projectUrl="" />
+            <ProjectCard image={ReactImage} alt="JIST!" cardTitle="JIST! [WIP]" tools={['React Native', 'Flask', 'JavaScript', 'GCP', 'Kubernetes']} cardDesc="Mobile app that uses NLP TextRank algorithm to create summaries of news articles from various news sources. Powered by React Native with Flask." projectUrl="" />
           </div>
           <div className="col-12 col-md-6 col-lg-4 my-2">
             <ProjectCard image={SmashstatsImage} alt="SmashStats" cardTitle="SmashStats Twitch Extension" tools={['JQuery', 'CSS', 'Flask', 'AWS']} cardDesc="Twitch extension that provides data for player matchups during Super Smash Bros. Melee tournament streams. JQuery + CSS frontend and Flask backend hosted on AWS." projectUrl="https://github.com/yungnickyoung/SmashStats-Melee-Twitch-Extension" />
