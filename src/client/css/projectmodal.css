@@ -1,0 +1,8 @@
+.carousel-item img {
+    width: 100%
+}
+
+.carousel-control-prev, .carousel-control-next{
+    align-items: flex-end !important;
+    padding-bottom: 2rem;
+}

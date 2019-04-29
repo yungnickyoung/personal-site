@@ -1,13 +1,36 @@
 
-$mynewcolor: #748d8a;
+$btnPrimaryColor: #748d8a;
+$btnSecondaryColor: #48c08c;
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
 
 .btn-primary {
-    @include button-variant($mynewcolor, darken($mynewcolor, 7.5%), darken($mynewcolor, 10%), lighten($mynewcolor,5%), lighten($mynewcolor, 10%), darken($mynewcolor,30%));
+    @include button-variant($btnPrimaryColor, darken($btnPrimaryColor, 7.5%), darken($btnPrimaryColor, 10%), lighten($btnPrimaryColor,5%), lighten($btnPrimaryColor, 10%), darken($btnPrimaryColor,30%));
+    color: white !important;
 }
 
 .btn-outline-primary {
-    @include button-outline-variant($mynewcolor, #222222, lighten($mynewcolor,5%), $mynewcolor);
+    @include button-outline-variant($btnPrimaryColor, #222222, lighten($btnPrimaryColor,5%), $btnPrimaryColor);
+    color: white !important;
 }
+
+.btn-secondary {
+    @include button-variant($btnSecondaryColor, darken($btnSecondaryColor, 7.5%), darken($btnSecondaryColor, 10%), lighten($btnSecondaryColor,5%), lighten($btnSecondaryColor, 10%), darken($btnSecondaryColor,30%));
+    color: white !important;
+}
+
+.btn-outline-secondary {
+    @include button-outline-variant($btnSecondaryColor, #222222, lighten($btnSecondaryColor,5%), $btnSecondaryColor);
+    color: darken($btnSecondaryColor,30%) !important;
+}
+
+.btn-outline-secondary:hover {
+    color: white !important;
+}
+
+@media (min-width: 992px) {
+    .modal-lg {
+      max-width: 700px;
+    }
+  }
