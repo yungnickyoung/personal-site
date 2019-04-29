@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function SectionTitle(props) {
+export default function SectionTitle(props) {
   return (
     <>
       <div style={{ paddingTop: "3.7rem" }}></div>
@@ -16,5 +16,3 @@ function SectionTitle(props) {
 SectionTitle.propTypes = {
   text: PropTypes.string.isRequired
 };
-
-export default SectionTitle;
