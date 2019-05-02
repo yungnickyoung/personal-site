@@ -14,7 +14,7 @@ export default class CardList extends Component {
               cardTitle="Personal Website"
               modalID="personalsite"
               modalImages={[]}
-              tools={['Bootstrap', 'React', 'Node', 'Express', 'AWS']}
+              tools={['Bootstrap', 'React.js', 'vis.js','Node', 'Express', 'AWS']}
               cardDesc="Personal portfolio website built with React.js + Bootstrap on the frontend and Node.js + Express on the backend."
               buttonTitles={["GitHub Repo"]}
               buttonUrls={["https://github.com/yungnickyoung/personal-site"]}
@@ -27,7 +27,7 @@ export default class CardList extends Component {
               cardTitle="JIST! [WIP]"
               modalID="jist"
               modalImages={["./src/client/assets/jist/pic1.png", "./src/client/assets/jist/pic2.png"]}
-              tools={['React Native', 'Flask', 'JavaScript', 'MySQL', 'GCP', 'Kubernetes']}
+              tools={['React Native', 'Flask', 'JavaScript', 'MySQL', 'Docker', 'GCP', 'Kubernetes']}
               cardDesc="Mobile app that uses Natural Language Processing algorithms to automatically create summaries of news articles from various news sources. Supports 14+ top news sources from which the user can customize viewing preferences. In development."
               buttonTitles={[]}
               buttonUrls={[]}

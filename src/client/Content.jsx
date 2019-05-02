@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import CardList from './CardList'
+import CardList from './CardList';
 import SectionTitle from './SectionTitle';
+import SkillsGraph from './SkillsGraph';
 
 export default class Content extends Component {
   render() {
@@ -26,8 +27,8 @@ export default class Content extends Component {
           </div>
         </div>
         <div className="row">
-          <div className="col">
-            
+          <div className="col justify-content-center text-center">
+            <SkillsGraph />
           </div>
         </div>
         <br />
