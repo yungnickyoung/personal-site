@@ -9,7 +9,7 @@ function Navlink(props) {
   }
 
   return (
-    <a className={linkClass}onClick={props.onClick}>
+    <a className={linkClass} onClick={props.onClick}>
       {props.text}
       {props.isActive && <span className="sr-only">(current)</span>}
     </a>

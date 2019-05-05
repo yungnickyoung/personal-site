@@ -11,17 +11,17 @@ class Navbar extends Component {
       <nav className="navbar sticky-top navbar-expand navbar-dark" style={{backgroundColor: "#1c2026", borderWidth: "0 0 8px", borderStyle: "solid", borderColor: "#48c08c"}}>
         <div className="container flex-column flex-md-row">
           <ul className="navbar-nav flex-row">
-            <li className="nav-item px-3">
-              <Navlink isActive={states[0]} onClick={() => {this.props.onClickTab(0); this.props.scrollFunc("projects");}} text="Projects"/>
+            <li className="nav-item px-3" key={0}>
+              <Navlink isActive={states[0]} text="Projects" onClick={() => {this.props.onClickTab(0); this.props.scrollFunc("projects");}} />
             </li>
-            <li className="nav-item px-3">
+            {/* <li className="nav-item px-3" key={1}>
               <Navlink isActive={states[1]} onClick={() => {this.props.onClickTab(1); this.props.scrollFunc("skills");}} text="Skills"/>
+            </li> */}
+            <li className="nav-item px-3" key={2}>
+              <Navlink isActive={states[2]} text="Experience" onClick={() => {this.props.onClickTab(2); this.props.scrollFunc("experience");}} />
             </li>
-            <li className="nav-item px-3">
-              <Navlink isActive={states[2]} onClick={() => {this.props.onClickTab(2); this.props.scrollFunc("experience");}} text="Experience"/>
-            </li>
-            <li className="nav-item px-3">
-              <Navlink isActive={states[3]} onClick={() => {this.props.onClickTab(3); this.props.scrollFunc("contact");}} text="Contact"/>
+            <li className="nav-item px-3" key={3}>
+              <Navlink isActive={states[3]} text="Contact" onClick={() => {this.props.onClickTab(3); this.props.scrollFunc("contact");}} />
             </li>
           </ul>
           <ul className="navbar-nav ml-none ml-md-auto flex-row d-none d-md-flex">

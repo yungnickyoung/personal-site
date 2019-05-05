@@ -38,7 +38,6 @@ class ProjectCard extends Component {
     });
   }
 
-
   render() {
     const { classes } = this.props;
     var isHover = this.state.isHover;

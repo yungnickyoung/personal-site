@@ -1,0 +1,22 @@
+.experience-image {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 20px;
+}
+
+.experience-title {
+    font-size: 2.3rem;
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1;
+}
+
+.experience-subtitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: 'Rubik', sans-serif;
+    line-height: 2;
+    color: #38A475;
+}
