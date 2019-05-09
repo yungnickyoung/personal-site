@@ -4,7 +4,7 @@ import SemipolarSpinner from '@bit/bondz.react-epic-spinners.semipolar-spinner';
 import './css/splash.css';
 import './css/sass.css';
 
-function Splash(props) {
+export default function Splash(props) {
   return (
       <div className="container-fluid height-100 px-0" style={{ overflow: "hidden" }}>
         <div className="splash">
@@ -25,5 +25,3 @@ Splash.propTypes = {
   onClickButton: PropTypes.func.isRequired,
   scrollFunc: PropTypes.func.isRequired
 };
-
-export default Splash;

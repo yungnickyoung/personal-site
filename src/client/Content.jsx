@@ -10,6 +10,7 @@ import UltimateSoftwareExperienceImage from './assets/experience/ultimatesoftwar
 import UFExperienceImage from './assets/experience/uf.jpg';
 
 export default class Content extends Component {
+  // COMMENTED OUT CODE : USED FOR ANIMATIONS
   // Returns true if elem is in viewport
   // isInViewport = (elem) => {
   //   var bounding = elem.getBoundingClientRect();
@@ -79,6 +80,7 @@ export default class Content extends Component {
           </div>
         </div>
 
+        {/* THE FOLLOWING IS FOR THE SKILLS SECTION */}
         {/* <div id="skills" style={{position: 'relative', top: '-66px', left: '0'}}></div>
         <div className="row justify-content-center">
           <div className="col justify-content-center text-center">

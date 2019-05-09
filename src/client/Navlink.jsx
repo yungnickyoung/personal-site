@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './css/navbar.css';
 
-function Navlink(props) {
+export default function Navlink(props) {
   let linkClass = "nav-link py-2 menu-item";
   if (props.isActive) {
     linkClass += " active";
@@ -21,5 +21,3 @@ Navlink.propTypes = {
   onClick: PropTypes.func.isRequired,
   text: PropTypes.string.isRequired
 };
-
-export default Navlink;

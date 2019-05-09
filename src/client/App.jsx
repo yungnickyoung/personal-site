@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import './css/app.css'
 import Navbar from './Navbar'
 import Content from './Content'
 import Splash from './Splash'
+
+import './css/app.css'
 
 export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tabStates: Array(4).fill(false)
+      tabStates: Array(4).fill(false) // Keep track of which navbar tab is active
     };
   }
 
-  // Used for setting the active tab of the navbar
+  // Used for setting the active tab of the navbar.
+  // Navbar uses this to determine which tab should have the green active color
   setActiveTab = (i) => {
     let newTabStates = Array(4).fill(false);
     newTabStates[i] = true;
@@ -22,14 +24,15 @@ export default class App extends Component {
     });
   }
 
-  // Used for scrolling to a section after clicking its link in the navbar
+  // Used for smooth scrolling to a section after clicking its link in the navbar
   scrollToTarget = (target) => {
     document.getElementById(target).scrollIntoView({
       behavior: 'smooth'
     });
   }
 
-  // "Scroll" event listening function
+  // "scroll" event listening function
+  // Used to change the active navbar tab as the user scrolls the page
   onScroll = () => {
     var projectsDist = Math.abs(ReactDOM.findDOMNode(document.getElementById("projects")).getBoundingClientRect().y);
     var experienceDist = Math.abs(ReactDOM.findDOMNode(document.getElementById("experience")).getBoundingClientRect().y);
