@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './css/projectmodal.css';
-import PersonalSiteImage from './assets/personalsite/card-personalsite.png';
-import SmashstatsImage from './assets/smashstats/card-smashstats.png';
-import VercareImage from './assets/vercare/card-vercare.png';
 
 export default class ProjectModal extends Component {
   constructor(props) {

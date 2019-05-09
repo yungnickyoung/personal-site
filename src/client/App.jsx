@@ -5,7 +5,6 @@ import Navbar from './Navbar'
 import Content from './Content'
 import Splash from './Splash'
 
-
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -14,6 +13,7 @@ export default class App extends Component {
     };
   }
 
+  // Used for setting the active tab of the navbar
   setActiveTab = (i) => {
     let newTabStates = Array(4).fill(false);
     newTabStates[i] = true;
@@ -22,12 +22,14 @@ export default class App extends Component {
     });
   }
 
+  // Used for scrolling to a section after clicking its link in the navbar
   scrollToTarget = (target) => {
     document.getElementById(target).scrollIntoView({
       behavior: 'smooth'
     });
   }
 
+  // "Scroll" event listening function
   onScroll = () => {
     var projectsDist = Math.abs(ReactDOM.findDOMNode(document.getElementById("projects")).getBoundingClientRect().y);
     var experienceDist = Math.abs(ReactDOM.findDOMNode(document.getElementById("experience")).getBoundingClientRect().y);

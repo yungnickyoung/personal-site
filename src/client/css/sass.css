@@ -7118,3 +7118,12 @@ a.text-dark:hover, a.text-dark:focus {
 @media (min-width: 992px) {
   .modal-lg {
     max-width: 700px; } }
+
+.alert-primary {
+  color: #ffffff;
+  background-color: #48c08c;
+  border-color: #6ecda4; }
+  .alert-primary hr {
+    border-top-color: #5bc798; }
+  .alert-primary .alert-link {
+    color: #e6e6e6; }
