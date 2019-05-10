@@ -20,3 +20,16 @@
     line-height: 2;
     color: #38A475;
 }
+
+ul.experience-list {
+    list-style: none;
+}
+
+ul.experience-list > li > span:before {
+    content: "\25a0";
+    vertical-align: middle;
+    position: absolute;
+    left: 2rem;
+    color: #38A475;
+    line-height: 1.2em;
+}
