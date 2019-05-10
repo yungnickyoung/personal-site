@@ -5,6 +5,7 @@ dist
 yarn.lock
 *.DS_Store
 /src/server/*
+*.zip
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
