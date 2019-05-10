@@ -1,0 +1,75 @@
+.semipolar-spinner {
+    height: 200px;
+    width: 200px;
+    position: relative;
+}
+
+.semipolar-spinner *, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.semipolar-spinner .ring {
+  border-radius: 50%;
+  position: absolute;
+  border: 10px solid transparent;
+  border-top-color: #48c08c;
+  border-left-color: #48c08c;
+  animation: semipolar-spinner-animation 20000ms infinite;
+  -webkit-animation: semipolar-spinner-animation 20000ms infinite;
+}
+
+.semipolar-spinner .ring:nth-child(1) {
+  height: 200px;
+  width: 200px;
+  top: 0;
+  left: 0;
+  animation-delay: 8000ms;
+  -webkit-animation-delay: 8000ms;
+  z-index: 5;
+}
+
+.semipolar-spinner .ring:nth-child(2) {
+  height: 160px;
+  width: 160px;
+  top: 20px;
+  left: 20px;
+  animation-delay: 6000ms;
+  -webkit-animation-delay: 6000ms;
+  z-index: 4;
+}
+
+.semipolar-spinner .ring:nth-child(3) {
+  height: 120px;
+  width: 120px;
+  top: 40px;
+  left: 40px;
+  animation-delay: 4000ms;
+  -webkit-animation-delay: 4000ms;
+  z-index: 3;
+}
+
+.semipolar-spinner .ring:nth-child(4) {
+  height: 80px;
+  width: 80px;
+  top: 60px;
+  left: 60px;
+  animation-delay: 2000ms;
+  -webkit-animation-delay: 2000ms;
+  z-index: 2;
+}
+
+.semipolar-spinner .ring:nth-child(5) {
+  height: 40px;
+  width: 40px;
+  top: 80px;
+  left: 80px;
+  animation-delay: 0;
+  -webkit-animation-delay: 0ms;
+  z-index: 1;
+}
+
+@keyframes semipolar-spinner-animation {
+  50% {
+    transform: rotate(360deg) scale(0.7);
+  }
+}

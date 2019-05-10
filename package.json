@@ -2,7 +2,7 @@
   "name": "personal-site",
   "version": "0.0.1",
   "description": "Personal portfolio website built with React, Bootstrap, and Express.",
-  "main": "src/server/index.js",
+  "private": true,
   "scripts": {
     "build": "webpack --mode production",
     "start": "npm run build && node src/server/index.js",
@@ -14,7 +14,6 @@
   "author": "Nicholas Young",
   "license": "ISC",
   "dependencies": {
-    "@bit/bondz.react-epic-spinners.semipolar-spinner": "^0.3.0",
     "@material-ui/core": "^3.9.3",
     "babel-polyfill": "^6.26.0",
     "bootstrap": "4.3.1",
