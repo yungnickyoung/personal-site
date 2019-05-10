@@ -65,7 +65,7 @@ export default function Contact(props) {
         </div>
       </div>
       <div id="contactAlert" className="alert alert-success alert-dismissible d-none fade show mx-2 text-center" role="alert" style={{ position: 'fixed', right: '0', bottom: '0' }}>
-        <strong>Message sent!</strong> Thanks for the message &mdash; I'll be sure to respond ASAP
+        <strong>Message sent!</strong> Thanks for the message &mdash; I'll get back to you ASAP!
       <button type="button" className="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
