@@ -6,6 +6,7 @@ yarn.lock
 *.DS_Store
 /src/server/*
 *.zip
+public/favicon.png
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
