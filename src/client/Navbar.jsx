@@ -10,17 +10,20 @@ export default function Navbar(props) {
       <nav className="navbar sticky-top navbar-expand navbar-dark" style={{ backgroundColor: "#1c2026", borderWidth: "0 0 8px", borderStyle: "solid", borderColor: "#48c08c" }}>
         <div className="container flex-column flex-md-row">
           <ul className="navbar-nav flex-row">
-            <li className="nav-item px-3" key={0}>
-              <Navlink isActive={states[0]} text="Projects" onClick={() => { props.onClickTab(0); props.scrollFunc("projects"); }} />
+            <li className="nav-item px-1 px-md-3" key={0}>
+              <Navlink isActive={states[0]} text="Home" onClick={() => { props.onClickTab(0); props.scrollFunc("home"); }} />
             </li>
-            {/* <li className="nav-item px-3" key={1}>
-              <Navlink isActive={states[1]} onClick={() => {this.props.onClickTab(1); this.props.scrollFunc("skills");}} text="Skills"/>
+            <li className="nav-item px-1 px-md-3" key={1}>
+              <Navlink isActive={states[1]} text="Projects" onClick={() => { props.onClickTab(1); props.scrollFunc("projects"); }} />
+            </li>
+            {/* <li className="nav-item px-1 px-md-3" key={2}>
+              <Navlink isActive={states[2]} onClick={() => {this.props.onClickTab(2); this.props.scrollFunc("skills");}} text="Skills"/>
             </li> */}
-            <li className="nav-item px-3" key={2}>
-              <Navlink isActive={states[2]} text="Experience" onClick={() => { props.onClickTab(2); props.scrollFunc("experience"); }} />
+            <li className="nav-item px-1 px-md-3" key={3}>
+              <Navlink isActive={states[3]} text="Experience" onClick={() => { props.onClickTab(3); props.scrollFunc("experience"); }} />
             </li>
-            <li className="nav-item px-3" key={3}>
-              <Navlink isActive={states[3]} text="Contact" onClick={() => { props.onClickTab(3); props.scrollFunc("contact"); }} />
+            <li className="nav-item px-1 px-md-3" key={4}>
+              <Navlink isActive={states[4]} text="Contact" onClick={() => { props.onClickTab(4); props.scrollFunc("contact"); }} />
             </li>
           </ul>
           <ul className="navbar-nav ml-none ml-md-auto flex-row d-none d-md-flex">
