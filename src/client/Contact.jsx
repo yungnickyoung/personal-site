@@ -29,7 +29,7 @@ var handleSubmit = (event) => {
 
 export default function Contact(props) {
   return (
-    <>
+    <div style={{backgroundColor: 'white'}}>
       <div id="contact" style={{ position: 'relative', top: '-66px', left: '0' }}></div>
       <div className="row justify-content-center">
         <div className="col justify-content-center text-center">
@@ -38,12 +38,12 @@ export default function Contact(props) {
       </div>
       <div className="row justify-content-center">
         <div className="col justify-content-center text-center">
-          <div className="mx-md-4 mb-3">Questions? Offers? Just want to say hi?</div>
+          <div className="px-md-4 pb-3">Questions? Offers? Just want to say hi?</div>
         </div>
       </div>
       <div className="row justify-content-center">
-        <div className="col-12 col-lg-8 md-auto justify-content-center text-center">
-          <form className="needs-validation" id="contact-form" onSubmit={handleSubmit} noValidate>
+        <div className="col-12 col-md-8 col-lg-6 col-xl-4  md-auto justify-content-center text-center">
+          <form className="needs-validation mx-3 mx-md-0" id="contact-form" onSubmit={handleSubmit} noValidate>
             <div className="form-group">
               <input type="text" className="form-control" id="nameInput" name="senderName" placeholder="Name (required)" required />
               <div className="invalid-feedback">
@@ -70,6 +70,6 @@ export default function Contact(props) {
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-    </>
+    </div>
   );
 }

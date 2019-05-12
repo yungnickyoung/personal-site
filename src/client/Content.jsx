@@ -36,7 +36,8 @@ export default class Content extends Component {
 
   render() {
     return (
-      <div className="container" style={{ backgroundColor: 'white', position: 'relative' }}>
+      <>
+      {/* <div className="container" style={{ backgroundColor: 'white', position: 'relative' }}> */}
         <Projects />
 
         {/* THE FOLLOWING IS FOR THE SKILLS SECTION */}
@@ -54,8 +55,9 @@ export default class Content extends Component {
 
         <Experience />
         <Contact />
-        <div style={{ paddingBottom: "26rem", display: "block" }}></div>
-      </div>
+        <div style={{ paddingBottom: "26rem", display: "block", backgroundColor: 'white'}}></div>
+      {/* </div> */}
+      </>
     );
   }
 }

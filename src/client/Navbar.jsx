@@ -6,8 +6,7 @@ import './css/navbar.css';
 export default function Navbar(props) {
   const states = props.tabStates;
   return (
-    <>
-      <nav className="navbar sticky-top navbar-expand navbar-dark" style={{ backgroundColor: "#1c2026", borderWidth: "0 0 8px", borderStyle: "solid", borderColor: "#48c08c" }}>
+      <nav className="navbar sticky-top navbar-expand navbar-dark" style={{ backgroundColor: "#1c2026", borderWidth: "0 0 8px", borderStyle: "solid", borderColor: "#48c08c"}}>
         <div className="container flex-column flex-md-row">
           <ul className="navbar-nav flex-row">
             <li className="nav-item px-1 px-md-3" key={0}>
@@ -54,7 +53,6 @@ export default function Navbar(props) {
           </ul>
         </div>
       </nav>
-    </>
   );
 }
 

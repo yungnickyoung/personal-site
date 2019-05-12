@@ -61,9 +61,13 @@ export default class App extends Component {
   render() {
     return (
       <>
+      <div style={{ overflowX: "hidden" }}>
         <Splash onClickButton={i => this.setActiveTab(i)} scrollFunc={targ => this.scrollToTarget(targ)} />
+      </div>
         <Navbar tabStates={this.state.tabStates} onClickTab={i => this.setActiveTab(i)} scrollFunc={targ => this.scrollToTarget(targ)} />
+      <div style={{ overflowX: "hidden" }}>
         <Content />
+      </div>
       </>
     );
   }

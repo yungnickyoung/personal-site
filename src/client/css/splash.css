@@ -38,6 +38,7 @@
 .splash .btn {
     font-family: 'Rubik', sans-serif !important;
     color: #48c08c !important;
+    transition: background-color .5s ease, color .4s ease !important;
 }
 
 .splash .btn:hover {
@@ -45,7 +46,11 @@
 }
 
 .splash .btn .arrow-svg {
-    transition: fill 0.2s ease, color 0.2s ease, transform 0.3s ease;
+    transition: transform 0.5s ease;
+}
+
+.splash .btn .arrow-svg path#svg-path {
+    transition: fill 0.3s ease;
 }
 
 .arrow-svg-hover {

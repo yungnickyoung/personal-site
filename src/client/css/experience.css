@@ -9,7 +9,6 @@
 .experience-title {
     font-size: 2.3rem;
     font-weight: 500;
-    /* font-family: 'Open Sans', sans-serif; */
     font-family: 'Rubik', sans-serif;
     opacity: 0.9;
     line-height: 1;
@@ -27,11 +26,18 @@ ul.experience-list {
     list-style: none;
 }
 
-ul.experience-list > li > span:before {
-    content: "\25a0";
-    vertical-align: middle;
+ul.experience-list li {
+    position: relative;
+    padding-bottom: .25rem;
+}
+
+ul.experience-list > li > .dot {
     position: absolute;
-    left: 2rem;
+    top: .3em;
+    left: -2em;
     color: #38A475;
-    line-height: 1.2em;
+    background-color:#38A475;
+    width: .7em;
+    height: .7em;
+    
 }
