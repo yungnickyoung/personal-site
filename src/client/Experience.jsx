@@ -23,13 +23,12 @@ export default function Experience(props) {
           <div className="experience-title">Ultimate Software</div>
           <div className="experience-subtitle mx-md-1">TECHSTAR INTERN - IDENTITY TEAM</div>
           <div className="experience-content mx-md-4">
-          Ensured authentication and authorization security for UltiPro users. My tasks included:
-          <ul className="experience-list text-left">
-            <li><span>Routing traffic with HAProxy</span></li>
-            <li><span>Writing Sensu checks in Ruby to monitor blue-green deployment environments</span></li>
-            <li><span>Developing Chef recipes to support CI/CD workflow</span></li>
-            <li><span>Learning and understanding OAuth 2.0 protocol</span></li>
-          </ul>
+            <ul className="experience-list text-left">
+              <li><span>Routed traffic with HAProxy</span></li>
+              <li><span>Created Sensu checks in Ruby to monitor blue-green deployment environments</span></li>
+              <li><span>Developed Chef recipes to support CI/CD workflow</span></li>
+              <li><span>Performed extensive code review with employees via BitBucket</span></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -42,12 +41,12 @@ export default function Experience(props) {
             UF Machine Learning &amp; Sensing Lab</div>
           <div className="experience-subtitle mx-md-1">UNDERGRADUATE RESEARCHER</div>
           <div className="experience-content mx-md-4">
-          <ul className="experience-list text-left">
-            <li><span>Partnered with the US Office of Naval Research for automating detection of sea mines.</span></li>
-            <li><span>Analyzed high-dimensionality feature vectors of sonar images of the ocean floor using MATLAB</span></li>
-            <li><span>Applied complex Machine Learning fuzzy clustering algorithms to automate classification of different segments of ocean floor</span></li>
-            <li><span>Co-authored <strong><a href="https://arxiv.org/abs/1709.10180v1" target="_blank">research paper on new fuzzy clustering algorithm</a></strong>, presented at the IEEE Symposium Series on Computational Intelligence conference in 2017</span></li>
-          </ul>
+            <ul className="experience-list text-left">
+              <li><span>Partnered with the US Office of Naval Research for automating detection of sea mines</span></li>
+              <li><span>Analyzed high-dimensionality feature vectors of sonar images of the ocean floor using MATLAB</span></li>
+              <li><span>Applied complex Machine Learning fuzzy clustering algorithms to automate classification of different segments of ocean floor</span></li>
+              <li><span>Co-authored <strong><a href="https://arxiv.org/abs/1709.10180v1" target="_blank">research paper on new fuzzy clustering algorithm</a></strong>, presented at the IEEE Symposium Series on Computational Intelligence conference in 2017</span></li>
+            </ul>
           </div>
         </div>
       </div>

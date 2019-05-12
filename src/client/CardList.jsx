@@ -31,7 +31,7 @@ export default function CardList() {
             cardTitle="Personal Website"
             modalID="personalsite"
             modalImages={[]}
-            tools={['Bootstrap', 'React.js', 'vis.js', 'Node', 'Express', 'AWS']}
+            tools={['Bootstrap', 'React.js', 'vis.js', 'SASS', 'Node.js', 'Express', 'AWS']}
             cardDesc="Personal portfolio website built with React.js + Bootstrap on the frontend and Node.js + Express on the backend."
             buttonTitles={["GitHub Repo"]}
             buttonUrls={["https://github.com/yungnickyoung/personal-site"]}
