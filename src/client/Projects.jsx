@@ -12,6 +12,7 @@ export default function Projects(props) {
           <SectionTitle id="sectionTitleProjects" text="My Projects" />
         </div>
       </div>
+      <div className="text-center justify-content-center d-block mb-3">Mouse over or tap on a project to learn more.</div>
       <div className="row">
         <div className="col">
           <CardList />

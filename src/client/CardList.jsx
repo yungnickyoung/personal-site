@@ -2,6 +2,7 @@ import React from 'react';
 import ProjectCard from './ProjectCard';
 
 import PersonalSiteCardImage from './assets/personalsite/card-personalsite.png';
+import PersonalSiteImage1 from './assets/personalsite/pic1.png';
 
 import JistCardImage from './assets/jist/card-jist.png';
 import JistModalImage1 from './assets/jist/pic1.png';
@@ -30,7 +31,7 @@ export default function CardList() {
             alt="Personal Website"
             cardTitle="Personal Website"
             modalID="personalsite"
-            modalImages={[]}
+            modalImages={[PersonalSiteImage1]}
             tools={['Bootstrap', 'React.js', 'vis.js', 'SASS', 'Node.js', 'Express', 'AWS']}
             cardDesc="Personal portfolio website built with React.js + Bootstrap on the frontend and Node.js + Express on the backend."
             buttonTitles={["GitHub Repo"]}
