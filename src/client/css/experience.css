@@ -9,7 +9,9 @@
 .experience-title {
     font-size: 2.3rem;
     font-weight: 500;
-    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Rubik', sans-serif;
+    opacity: 0.9;
     line-height: 1;
 }
 

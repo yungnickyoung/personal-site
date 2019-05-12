@@ -6,3 +6,8 @@
     align-items: flex-end !important;
     padding-bottom: 2rem;
 }
+
+div.modal-body > h2 {
+    font-family: 'Rubik', sans-serif;
+    opacity: 0.8;
+}

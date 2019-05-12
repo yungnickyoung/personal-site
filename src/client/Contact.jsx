@@ -33,7 +33,7 @@ export default function Contact(props) {
       <div id="contact" style={{ position: 'relative', top: '-66px', left: '0' }}></div>
       <div className="row justify-content-center">
         <div className="col justify-content-center text-center">
-          <SectionTitle id="sectionTitleContact" text="Contact Me" />
+          <SectionTitle id="sectionTitleContact" text="CONTACT" />
         </div>
       </div>
       <div className="row justify-content-center">

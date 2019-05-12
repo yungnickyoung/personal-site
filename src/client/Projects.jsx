@@ -9,7 +9,7 @@ export default function Projects(props) {
 
       <div className="row justify-content-center">
         <div className="col justify-content-center text-center">
-          <SectionTitle id="sectionTitleProjects" text="My Projects" />
+          <SectionTitle id="sectionTitleProjects" text="PORTFOLIO" />
         </div>
       </div>
       <div className="text-center justify-content-center d-block mb-3">Mouse over or tap on a project to learn more.</div>

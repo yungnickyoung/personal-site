@@ -11,7 +11,7 @@ export default function Experience(props) {
       <div id="experience" style={{ position: 'relative', top: '-66px', left: '0' }}></div>
       <div className="row justify-content-center">
         <div className="col justify-content-center text-center">
-          <SectionTitle id="sectionTitleExperience" text="My Experience" />
+          <SectionTitle id="sectionTitleExperience" text="EXPERIENCE" />
         </div>
       </div>
       <div className="justify-content-center text-center mb-5">The following is my professional experience. For more information, check out <strong><a href="https://www.linkedin.com/in/yungnickyoung/" target="_blank">my LinkedIn</a></strong>.</div>
