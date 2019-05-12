@@ -59,7 +59,7 @@ class ProjectCard extends Component {
                 {this.props.tools.map((tool, i) => <div className="project-tool px-2 py-1" style={{ display: 'inline' }} key={i}>{tool}</div>)}
               </div>
               <div>
-                <a role="button" className="mt-4 btn btn-primary" data-toggle="modal" data-target={"#" + this.props.modalID}>Learn more</a>
+                <a role="button" className="mt-4 btn btn-secondary" data-toggle="modal" data-target={"#" + this.props.modalID}>Learn more</a>
               </div>
             </div>
           </CardActionArea>
