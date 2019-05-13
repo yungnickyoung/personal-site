@@ -48,5 +48,6 @@
 .card-content .btn {
     font-family: 'Rubik', sans-serif;
     color: white !important;
+    position: relative; 
 }
 

@@ -5,6 +5,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import { CardActionArea } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import ProjectModal from './ProjectModal';
+import $ from 'jquery';
 
 import './css/projectcard.css';
 
@@ -50,34 +51,34 @@ class ProjectCard extends Component {
 
     return (
       <>
-        <Card className={classes.card + ' card-base mx-auto'}>
+        <Card className={classes.card + ' card-base mx-auto'} onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave} onClick={() => {$("#btn-"+this.props.modalID).click();}}>
           <CardActionArea>
-            <CardMedia className={classes.media + " " + imageClass} image={this.props.image} title={this.props.alt} onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave}/>
+            <CardMedia className={classes.media + " " + imageClass} image={this.props.image} title={this.props.alt} onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave} />
             <div className={contentClass + " px-0"} onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave}>
               <div className="px-2 card-title">{this.props.cardTitle}</div>
               <div className="d-flex flex-row justify-content-center mx-2" style={{ flexWrap: 'wrap' }}>
                 {this.props.tools.map((tool, i) => <div className="project-tool px-2 py-1" style={{ display: 'inline' }} key={i}>{tool}</div>)}
               </div>
               <div>
-                <a role="button" className="mt-4 btn btn-secondary" data-toggle="modal" data-target={"#" + this.props.modalID}>Learn more</a>
+                <a role="button" id={"btn-" + this.props.modalID}className="mt-4 btn btn-secondary" data-toggle="modal" data-target={"#" + this.props.modalID}>Learn more</a>
               </div>
             </div>
           </CardActionArea>
         </Card>
-        <ProjectModal 
-          id={this.props.modalID} 
-          title={this.props.cardTitle} 
-          images={this.props.modalImages} 
-          alt={this.props.alt} 
-          desc={this.props.cardDesc} 
+        <ProjectModal
+          id={this.props.modalID}
+          title={this.props.cardTitle}
+          images={this.props.modalImages}
+          alt={this.props.alt}
+          desc={this.props.cardDesc}
           buttonTitles={this.props.buttonTitles}
           buttonUrls={this.props.buttonUrls}
         />
       </>
-            );
-          }
-        }
-        
+    );
+  }
+}
+
 ProjectCard.propTypes = {
   classes: PropTypes.object.isRequired,
   image: PropTypes.string.isRequired,
@@ -90,7 +91,7 @@ ProjectCard.propTypes = {
   buttonTitles: PropTypes.array.isRequired,
   buttonUrls: PropTypes.array.isRequired
 };
-          
+
 export default withStyles(styles)(ProjectCard);
-          
-          
+
+
