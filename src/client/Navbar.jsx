@@ -6,8 +6,12 @@ import './css/navbar.css';
 export default function Navbar(props) {
   const states = props.tabStates;
   return (
-      <nav className="navbar sticky-top navbar-expand navbar-dark" style={{ backgroundColor: "#1c2026", borderWidth: "0 0 8px", borderStyle: "solid", borderColor: "#48c08c"}}>
-        <div className="container flex-column flex-md-row">
+    <>
+      <nav className="navbar sticky-top navbar-expand navbar-dark" style={{ backgroundColor: "#1c2026", borderWidth: "0 0 8px", borderStyle: "solid", borderColor: "#48c08c" }}>
+        <button className="navbar-toggler d-block d-sm-none border-0" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="d-none d-sm-flex container flex-column flex-md-row">
           <ul className="navbar-nav flex-row">
             <li className="nav-item px-1 px-md-3" key={0}>
               <Navlink isActive={states[0]} text="HOME" onClick={() => { props.onClickTab(0); props.scrollFunc("home"); }} />
@@ -43,8 +47,8 @@ export default function Navbar(props) {
                 <svg xmlns="http://www.w3.org/2000/svg" style={{ display: "inline-block", width: "1.5rem", height: "1.5rem", verticalAlign: "text-top" }} viewBox="0 0 24 24" role="img" focusable="false">
                   <title>LinkedIn</title>
                   <path
-                    fill="currentColor" 
-                    fillRule="evenodd" 
+                    fill="currentColor"
+                    fillRule="evenodd"
                     d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
                   />
                 </svg>
@@ -53,6 +57,26 @@ export default function Navbar(props) {
           </ul>
         </div>
       </nav>
+      <div className="collapse d-sm-none" id="navbarToggleExternalContent">
+        <ul className="d-flex flex-column my-1 ml-2 p-0">
+          <li className="px-1 px-md-3" data-toggle="collapse" data-target="#navbarToggleExternalContent" key={0}>
+            <Navlink isActive={states[0]} text="HOME" onClick={() => { props.onClickTab(0); props.scrollFunc("home"); }} />
+          </li>
+          <li className="px-1 px-md-3" data-toggle="collapse" data-target="#navbarToggleExternalContent" key={1}>
+            <Navlink isActive={states[1]} text="PORTFOLIO" onClick={() => { props.onClickTab(1); props.scrollFunc("projects"); }} />
+          </li>
+          {/* <li className="px-1 px-md-3" data-toggle="collapse" data-target="#navbarToggleExternalContent" key={2}>
+              <Navlink isActive={states[2]} onClick={() => {this.props.onClickTab(2); this.props.scrollFunc("skills");}} text="Skills"/>
+            </li> */}
+          <li className="px-1 px-md-3" data-toggle="collapse" data-target="#navbarToggleExternalContent" key={3}>
+            <Navlink isActive={states[3]} text="EXPERIENCE" onClick={() => { props.onClickTab(3); props.scrollFunc("experience"); }} />
+          </li>
+          <li className="px-1 px-md-3" data-toggle="collapse" data-target="#navbarToggleExternalContent" key={4}>
+            <Navlink isActive={states[4]} text="CONTACT" onClick={() => { props.onClickTab(4); props.scrollFunc("contact"); }} />
+          </li>
+        </ul>
+      </div>
+    </>
   );
 }
 

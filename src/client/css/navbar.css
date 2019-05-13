@@ -17,3 +17,11 @@
     color: #ffffff !important;
     cursor: pointer;
 }
+
+#navbarToggleExternalContent {
+    background-color: #212c36;
+}
+
+#navbarToggleExternalContent > ul{
+    list-style: none;
+}

@@ -41,9 +41,18 @@ $btnSecondaryColor: #48c08c;
 
 .sticky-top {
     @supports (position: sticky) or (position: -webkit-sticky) {
-      position: -webkit-sticky;
-      position: sticky;
-      top: 0;
-      z-index: $zindex-sticky;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: $zindex-sticky;
     }
-  }
+}
+
+#navbarToggleExternalContent {
+    @supports (position: sticky) or (position: -webkit-sticky) {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 3.75em;
+        z-index: $zindex-sticky + 1;
+    }
+}
