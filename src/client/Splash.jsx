@@ -30,18 +30,18 @@ export default class Splash extends Component {
               <div className="col">
                 <h1 className="welcome-text px-3">Hi, my name is <span className="highlight">Nick Young</span></h1>
                 <h1 className="sub-text px-3 pt-3">I'm a <span className="highlight">full-stack</span> web &amp; software developer</h1>
-                <a 
-                  role="button" 
-                  className="my-5 btn btn-outline-secondary btn-lg" 
-                  onClick={() => { 
-                    this.props.onClickButton(1); 
-                    this.props.scrollFunc("projects"); 
-                  } }
-                  onMouseEnter={this.buttonEnter} 
+                <a
+                  role="button"
+                  className="my-5 btn btn-outline-secondary btn-lg"
+                  onClick={() => {
+                    this.props.onClickButton(1);
+                    this.props.scrollFunc("projects");
+                  }}
+                  onMouseEnter={this.buttonEnter}
                   onMouseLeave={this.buttonLeave}
                 >
-                See my portfolio
-                <svg id="arrow-svg" className="arrow-svg" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                  See my portfolio
+                  <svg id="arrow-svg" className="arrow-svg" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
                     <path id="svg-path" className="svg-path" fill="#48c08c" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
                     <path fill="none" d="M0 0h24v24H0V0z" />
                   </svg>

@@ -58,16 +58,33 @@ export default class App extends Component {
     window.removeEventListener("scroll", this.onScroll, false);
   }
 
+  footerEnter = () => {
+    document.getElementById('footer-svg').classList.add('footer-svg-hover');
+    document.getElementById('footer-path').classList.add('footer-path-hover');
+  }
+
+  footerLeave = () => {
+    document.getElementById('footer-svg').classList.remove('footer-svg-hover');
+    document.getElementById('footer-path').classList.remove('footer-path-hover');
+  }
   render() {
     return (
       <>
-      <div style={{ overflowX: "hidden" }}>
-        <Splash onClickButton={i => this.setActiveTab(i)} scrollFunc={targ => this.scrollToTarget(targ)} />
-      </div>
+        <div style={{ overflowX: "hidden" }}>
+          <Splash onClickButton={i => this.setActiveTab(i)} scrollFunc={targ => this.scrollToTarget(targ)} />
+        </div>
         <Navbar tabStates={this.state.tabStates} onClickTab={i => this.setActiveTab(i)} scrollFunc={targ => this.scrollToTarget(targ)} />
-      <div style={{ overflowX: "hidden" }}>
-        <Content />
-      </div>
+        <div style={{ overflowX: "hidden" }}>
+          <Content />
+        </div>
+        <center style={{ backgroundColor: 'white', paddingTop: "17rem", paddingBottom: '4rem'}}>
+          <svg id="footer-svg" onMouseEnter={this.footerEnter} onMouseLeave={this.footerLeave} onClick={() => {this.setActiveTab(0); this.scrollToTarget('home');}} xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
+            <path id="footer-path" fill="#48c08c" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+            <path fill="none" d="M0 0h24v24H0V0z" />
+          </svg>
+
+        </center>
+        {/* <div id="bottom-padding"></div> */}
       </>
     );
   }

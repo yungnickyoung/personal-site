@@ -55,7 +55,6 @@ export default class Content extends Component {
 
         <Experience />
         <Contact />
-        <div style={{ paddingBottom: "26rem", display: "block", backgroundColor: 'white'}}></div>
       {/* </div> */}
       </>
     );

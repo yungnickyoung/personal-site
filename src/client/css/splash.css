@@ -46,7 +46,9 @@
 }
 
 .splash .btn .arrow-svg {
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, top 0.5s ease;
+    position: relative;
+    top: -2px;
 }
 
 .splash .btn .arrow-svg path#svg-path {
@@ -55,6 +57,7 @@
 
 .arrow-svg-hover {
     transform: rotate(90deg);
+    top: 0px;
 }
 
 .svg-path-hover {
