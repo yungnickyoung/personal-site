@@ -21,7 +21,8 @@ Build for production:
 Start production server:
 `npm start`
 
-## Tools
+## Some Tools
+See the package.json for a list of all dependencies.
 ### Babel
 Babel allows us to write code in the latest version of JavaScript, e.g. ES6. It compiles newer JavaScript into older JavaScript so that it will be compatible with many environments. It also compiles JSX to JS. The .babelrc file specifies configuration. Preset @babel/preset-env allows for newer JS to be compiled down to ES5. Preset @babel/preset-react allows for conversion of JSX to JS.
 
