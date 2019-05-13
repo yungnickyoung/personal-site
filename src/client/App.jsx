@@ -22,13 +22,19 @@ export default class App extends Component {
     this.setState({
       tabStates: newTabStates
     });
+    var isSmoothScrollSupported = false;
   }
 
   // Used for smooth scrolling to a section after clicking its link in the navbar
   scrollToTarget = (target) => {
-    document.getElementById(target).scrollIntoView({
-      behavior: 'smooth'
-    });
+    let options = {};
+    if (this.isSmoothScrollSupported) {
+      options.behavior = 'smooth';
+    } else {
+      options.behavior = 'auto';
+    }
+
+    document.getElementById(target).scrollIntoView(options);
   }
 
   // "scroll" event listening function
@@ -39,19 +45,20 @@ export default class App extends Component {
     var experienceDist = Math.abs(ReactDOM.findDOMNode(document.getElementById("experience")).getBoundingClientRect().y);
     var contactDist = Math.abs(ReactDOM.findDOMNode(document.getElementById("contact")).getBoundingClientRect().y);
 
-    if (homeDist < 20) {
+    if (homeDist < 60) {
       this.setActiveTab(0);
     } else if (projectsDist < 20) {
       this.setActiveTab(1);
     } else if (experienceDist < 20) {
       this.setActiveTab(3);
-    } else if (contactDist < 20) {
+    } else if (contactDist < 60) {
       this.setActiveTab(4);
     }
   }
 
   componentDidMount() {
     window.addEventListener("scroll", this.onScroll, false);
+    this.isSmoothScrollSupported = 'scrollBehavior' in document.documentElement.style;
   }
 
   componentWillUnmount() {

@@ -38,3 +38,12 @@ $btnSecondaryColor: #48c08c;
 .alert-primary {
     @include alert-variant($btnSecondaryColor, lighten($btnSecondaryColor, 10%), #ffffff);
 }
+
+.sticky-top {
+    @supports (position: sticky) or (position: -webkit-sticky) {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      z-index: $zindex-sticky;
+    }
+  }

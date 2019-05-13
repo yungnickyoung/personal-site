@@ -7127,3 +7127,10 @@ a.text-dark:hover, a.text-dark:focus {
     border-top-color: #5bc798; }
   .alert-primary .alert-link {
     color: #e6e6e6; }
+
+@supports (position: sticky) or (position: -webkit-sticky) {
+  .sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020; } }
