@@ -3,9 +3,21 @@ import CardList from './CardList';
 import SectionTitle from './SectionTitle';
 
 export default function Projects(props) {
+  var ua = window.navigator.userAgent;
+  var isIE = /MSIE|Trident|Edge/.test(ua);
+  var sectionStyle = {
+    position: 'relative',
+    left: '0',
+    top: '-66px'
+  };
+
+  if (isIE) {
+    sectionStyle.top = '0'; // Otherwise the section marker cannot be scrolled to in IE/Edge
+  }
+  
   return (
-    <div className="pb-5" style={{backgroundColor: 'white'}}>
-      <div id="projects" style={{ position: 'relative', top: '-66px', left: '0' }}></div>
+    <div className="pb-5" style={{ backgroundColor: 'white' }}>
+      <div id="projects" style={sectionStyle}></div>
 
       <div className="row justify-content-center">
         <div className="col justify-content-center text-center">
