@@ -80,14 +80,14 @@ export default function CardList() {
         <div className="col-12 col-md-6 col-lg-4 my-2">
           <ProjectCard
             image={LookingGlassCardImage}
-            alt="Looking Glass [WIP]"
-            cardTitle="Looking Glass"
+            alt="LookinGlass [WIP]"
+            cardTitle="LookinGlass"
             modalID="lookingglass"
             modalImages={[LookingGlassModalImage1]}
-            tools={['Java', 'C++']}
-            cardDesc="Windows 10 window management software that allows users to control windows in pre-set or custom-made arrangements and patterns with user-defined hotkeys."
+            tools={['Java', 'JNA', 'C++']}
+            cardDesc="Windows 10 window management software that allows users to control windows in pre-set or custom-made arrangements and patterns with user-defined hotkeys. Uses Java Native Access (JNA) to invoke native code for handling keyboard event listening and window size &amp; position management."
             buttonTitles={["GitHub Repo"]}
-            buttonUrls={["https://github.com/yungnickyoung/Looking-Glass"]}
+            buttonUrls={["https://github.com/yungnickyoung/LookinGlass"]}
           />
         </div>
       </div>
