@@ -28,8 +28,8 @@ export default class Splash extends Component {
           <div className="splash">
             <div className="row align-items-center justify-content-center height-100">
               <div className="col">
-                <h1 className="welcome-text px-3">Hi, my name is <span className="highlight">Nick Young</span></h1>
-                <h1 className="sub-text px-3 pt-3">I'm a <span className="highlight">full-stack</span> web &amp; software developer</h1>
+                <div className="welcome-text px-3">Hi, I'm <span className="highlight">Nick Young</span>.</div>
+                <div className="sub-text px-3 pt-3">I'm a <span className="highlight">full-stack</span> web &amp; software developer.</div>
                 <a
                   role="button"
                   className="my-5 btn btn-outline-secondary btn-lg"

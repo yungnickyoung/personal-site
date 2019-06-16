@@ -38,7 +38,12 @@ export default function Contact(props) {
       </div>
       <div className="row justify-content-center">
         <div className="col justify-content-center text-center">
-          <div className="px-md-4 pb-3">Questions? Offers? Just want to say hi?</div>
+          <div className="px-md-4 pb-3">
+            Let's get in touch! 
+            <br /> 
+            Use the form below, or email me directly at <a href="mailto:ndyoung96@gmail.com">ndyoung96@gmail.com</a>.
+            <br />
+          </div>
         </div>
       </div>
       <div className="row justify-content-center">

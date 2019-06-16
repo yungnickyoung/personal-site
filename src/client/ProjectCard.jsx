@@ -51,7 +51,7 @@ class ProjectCard extends Component {
 
     return (
       <>
-        <Card className={classes.card + ' card-base mx-auto'} onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave} onClick={() => {$("#btn-"+this.props.modalID).click();}}>
+        <Card className={classes.card + ' card-base mx-auto'} onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave} >
           <CardActionArea>
             <CardMedia className={classes.media + " " + imageClass} image={this.props.image} title={this.props.alt} onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave} />
             <div className={contentClass + " px-0"} onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave}>
