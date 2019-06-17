@@ -20,8 +20,9 @@ var handleSubmit = (event) => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify($('#contact-form').serializeArray()),
   }).then((res) => {
+    document.getElementById('contactAlert').classList.remove("d-none");
     document.getElementById('contactAlert').classList.add("d-block");
-    document.getElementById('contactAlert').classList.add("wow");
+    document.getElementById('contactAlert').classList.add("animated");
     document.getElementById('contactAlert').classList.add("bounceInUp");
     document.getElementById('contact-form').reset();
     form.classList.remove('was-validated');
