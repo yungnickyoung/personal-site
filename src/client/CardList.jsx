@@ -24,8 +24,9 @@ import LookingGlassModalImage1 from './assets/lookingglass/pic1.png';
 export default function CardList() {
   // Disable card flip animations on safari due to bug with displaying modals 
   var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  var isEdge = /Edge/.test(navigator.userAgent);
   var animationClasses = "";
-  if (!isSafari) {
+  if (!isSafari && !isEdge) {
     animationClasses = " wow flipInX";
   }
   return (
