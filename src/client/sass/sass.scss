@@ -21,8 +21,8 @@ $btnSecondaryColor: #48c08c;
 }
 
 .btn-outline-secondary {
-    @include button-outline-variant($btnSecondaryColor, #222222, lighten($btnSecondaryColor,5%), $btnSecondaryColor);
-    color: darken($btnSecondaryColor,30%) !important;
+    @include button-outline-variant(rgba(255, 0, 0, 0), #222222, $btnSecondaryColor, rgba(255,0,0,0));
+    color: #000000 !important;
 }
 
 .btn-outline-secondary:hover {

@@ -33,3 +33,7 @@ path#footer-path {
     border-style: none;
     border-color: #48c08c;
 }
+
+.wow {
+    visibility: hidden;
+}

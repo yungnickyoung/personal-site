@@ -28,11 +28,12 @@ export default class Splash extends Component {
           <div className="splash">
             <div className="row align-items-center justify-content-center height-100">
               <div className="col">
-                <div className="welcome-text px-3">Hi, I'm <span className="highlight">Nick Young</span>.</div>
-                <div className="sub-text px-3 pt-3">I'm a <span className="highlight">full-stack</span> web &amp; software developer.</div>
+                <div className="welcome-text px-3 wow bounce" style={{fontSize: "4rem"}}>Hi!</div>
+                <div className="welcome-text px-3 wow fadeIn delay-1s">My name is <span className="highlight">Nick Young</span></div>
+                <div className="sub-text px-3 pt-3 wow fadeIn delay-2s">I'm a <span className="highlight">full-stack</span> web &amp; software developer</div>
                 <a
                   role="button"
-                  className="my-5 btn btn-outline-secondary btn-lg"
+                  className="my-5 btn btn-outline-secondary btn-lg wow fadeIn delay-3s"
                   onClick={() => {
                     this.props.onClickButton(1);
                     this.props.scrollFunc("projects");
@@ -46,9 +47,9 @@ export default class Splash extends Component {
                     <path fill="none" d="M0 0h24v24H0V0z" />
                   </svg>
                 </a>
-                <center>
+                <div className="d-flex text-center justify-content-center">
                   <Spinner />
-                </center>
+                </div>
               </div>
             </div>
           </div>

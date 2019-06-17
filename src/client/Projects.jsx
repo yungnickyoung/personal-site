@@ -24,7 +24,7 @@ export default function Projects(props) {
           <SectionTitle id="sectionTitleProjects" text="PORTFOLIO" />
         </div>
       </div>
-      <div className="text-center justify-content-center d-block mb-3 mx-2">Mouse over or tap on a project to learn more.</div>
+      <div className="text-center justify-content-center d-block mb-3 mx-2 wow fadeIn"  data-wow-delay=".7s">Mouse over or tap on a project to learn more.</div>
       <div className="row">
         <div className="col">
           <CardList />

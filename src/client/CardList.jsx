@@ -22,10 +22,16 @@ import LookingGlassCardImage from './assets/lookingglass/card-lookingglass.png';
 import LookingGlassModalImage1 from './assets/lookingglass/pic1.png';
 
 export default function CardList() {
+  // Disable card flip animations on safari due to bug with displaying modals 
+  var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  var animationClasses = "";
+  if (!isSafari) {
+    animationClasses = " wow flipInX";
+  }
   return (
     <div className="container">
       <div className="row justify-content-center">
-        <div className="col-12 col-md-6 col-lg-4 my-2">
+        <div className={"col-12 col-md-6 col-lg-4 my-2" + animationClasses} data-wow-delay="1s">
           <ProjectCard
             image={PersonalSiteCardImage}
             alt="Personal Website"
@@ -38,7 +44,7 @@ export default function CardList() {
             buttonUrls={["https://github.com/yungnickyoung/personal-site"]}
           />
         </div>
-        <div className="col-12 col-md-6 col-lg-4 my-2">
+        <div className={"col-12 col-md-6 col-lg-4 my-2" + animationClasses} data-wow-delay="1.4s">
           <ProjectCard
             image={JistCardImage}
             alt="JIST!"
@@ -51,7 +57,7 @@ export default function CardList() {
             buttonUrls={[]}
           />
         </div>
-        <div className="col-12 col-md-6 col-lg-4 my-2">
+        <div className={"col-12 col-md-6 col-lg-4 my-2" + animationClasses} data-wow-delay="1.8s">
           <ProjectCard
             image={SmashStatsCardImage}
             alt="SmashStats"
@@ -64,7 +70,7 @@ export default function CardList() {
             buttonUrls={["https://github.com/yungnickyoung/SmashStats-Melee-Twitch-Extension", "https://www.twitch.tv/ext/807s6vsk4gkel6rx8zk7ys8jome5sj-0.0.1"]}
           />
         </div>
-        <div className="col-12 col-md-6 col-lg-4 my-2">
+        <div className={"col-12 col-md-6 col-lg-4 my-2" + animationClasses} data-wow-delay="2.2s">
           <ProjectCard
             image={VerCareCardImage}
             alt="VerCare [WIP]"
@@ -77,7 +83,7 @@ export default function CardList() {
             buttonUrls={["https://github.com/yungnickyoung/VerCare"]}
           />
         </div>
-        <div className="col-12 col-md-6 col-lg-4 my-2">
+        <div className={"col-12 col-md-6 col-lg-4 my-2" + animationClasses} data-wow-delay="2.6s">
           <ProjectCard
             image={LookingGlassCardImage}
             alt="LookinGlass [WIP]"

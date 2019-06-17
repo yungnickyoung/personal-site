@@ -4,7 +4,6 @@ import Experience from './Experience';
 import Contact from './Contact';
 import SkillsGraph from './SkillsGraph';
 import SectionTitle from './SectionTitle';
-import './css/animation.css';
 
 export default class Content extends Component {
   // COMMENTED OUT CODE : USED FOR ANIMATIONS
@@ -18,20 +17,36 @@ export default class Content extends Component {
   // }
 
   // onScroll = () => {
-  //   let elems = [
+  //   let fadeInElems = [
   //     document.getElementById("sectionTitleProjects"),
   //     document.getElementById("sectionTitleExperience"),
   //     document.getElementById("sectionTitleContact")    
   //   ];
 
-  //   console.log(elems);
+  //   let flipInXElems = [
+  //     document.getElementById("card1"),
+  //     document.getElementById("card2")
+  //   ];
 
-  //   for (var e of elems) {
+  //   console.log(fadeInElems);
+  //   console.log(flipInXElems);
+
+  //   // for (var e of fadeInElems) {
+  //   //   if (this.isInViewport(e)) {
+  //   //     e.classList.add('animated');
+  //   //     e.classList.add('fadeIn');
+  //   //   }
+  //   // }
+
+  //   for (var e of flipInXElems) {
   //     if (this.isInViewport(e)) {
   //       e.classList.add('animated');
-  //       e.classList.add('slide-left');
-  //     }
+  //       e.classList.add('flipInX');      }
   //   }
+  // }
+
+  // componentDidMount() {
+  //   window.addEventListener("scroll", this.onScroll, false);
   // }
 
   render() {
