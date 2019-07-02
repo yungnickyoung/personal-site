@@ -1,10 +1,10 @@
 
+@import "node_modules/bootstrap/scss/bootstrap";
+
 $btnPrimaryColor: #748d8a;
 $btnSecondaryColor: #48c08c;
 
-@import "node_modules/bootstrap/scss/bootstrap";
-
-
+// Override bootstrap primary and secondary button colors
 .btn-primary {
     @include button-variant($btnPrimaryColor, darken($btnPrimaryColor, 7.5%), darken($btnPrimaryColor, 10%), lighten($btnPrimaryColor,5%), lighten($btnPrimaryColor, 10%), darken($btnPrimaryColor,30%));
     color: white !important;
@@ -29,16 +29,19 @@ $btnSecondaryColor: #48c08c;
     color: white !important;
 }
 
+// Adjust modal width on large devices
 @media (min-width: 992px) {
     .modal-lg {
       max-width: 700px;
     }
 }
 
+// Modify bootstrap primary alert (used as contact form message sent notification)
 .alert-primary {
     @include alert-variant($btnSecondaryColor, lighten($btnSecondaryColor, 10%), #ffffff);
 }
 
+// sticky-top class for navbar
 .sticky-top {
     @supports (position: sticky) or (position: -webkit-sticky) {
         position: -webkit-sticky;
@@ -48,6 +51,7 @@ $btnSecondaryColor: #48c08c;
     }
 }
 
+// sticky config for mobile navbar
 #navbarToggleExternalContent {
     @supports (position: sticky) or (position: -webkit-sticky) {
         position: -webkit-sticky;
