@@ -3,26 +3,18 @@ import ReactDOM from 'react-dom';
 import Navbar from './Navbar';
 import Content from './Content';
 import Splash from './Splash';
-import WOW from 'wowjs';;
+import Footer from './Footer';
+import WOW from 'wowjs';
 
 import './css/app.css';
+import './css/sass.css';
 
-var wow = new WOW.WOW(
-  {
-    boxClass:     'wow',      // animated element css class (default is wow)
-    animateClass: 'animated', // animation css class (default is animated)
-    offset:       0,          // distance to the element when triggering the animation (default is 0)
-    mobile:       false,       // trigger animations on mobile devices (default is true)
-    live:         true,       // act on asynchronously loaded content (default is true)
-    callback:     function(box) {
-      // the callback is fired every time an animation is started
-      // the argument that is passed in is the DOM node being animated
-    },
-    scrollContainer: null // optional scroll container selector, otherwise use window
-  }
-);
-wow.init();
-
+/**
+ * My personal website, at www.yungnickyoung.com
+ *
+ * @version 1.1.2
+ * @author [Nick Young](https://github.com/yungnickyoung)
+ */
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -31,19 +23,26 @@ export default class App extends Component {
     };
   }
 
-  // Used for setting the active tab of the navbar.
-  // Navbar uses this to determine which tab should have the green active color
-  setActiveTab = (i) => {
+  /** 
+   * Set the active tab of the navbar.
+   * Navbar uses this to determine which tab should have the green active text color.
+   * 
+   * @param {number} tabID ID of tab to set as active
+   */
+  setActiveTab = (tabID) => {
     let newTabStates = Array(5).fill(false);
-    newTabStates[i] = true;
+    newTabStates[tabID] = true;
     this.setState({
       tabStates: newTabStates
     });
-    var isSmoothScrollSupported = false;
   }
 
-  // Used for smooth scrolling to a section after clicking its link in the navbar
-  scrollToTarget = (target) => {
+  /**
+   * Scroll to the element with the specified ID. Will use smooth scrolling if available.
+   * 
+   * @param {number} id ID of the element to scroll to
+   */
+  scrollToTarget = (id) => {
     let options = {};
     if (this.isSmoothScrollSupported) {
       options.behavior = 'smooth';
@@ -51,17 +50,21 @@ export default class App extends Component {
       options.behavior = 'auto';
     }
 
-    document.getElementById(target).scrollIntoView(options);
+    document.getElementById(id).scrollIntoView(options);
   }
 
-  // "scroll" event listening function
-  // Used to change the active navbar tab as the user scrolls the page
+  /**
+   * "scroll" event listening function.
+   * Used to change the active navbar tab as the user scrolls up or down the page.
+   */
   onScroll = () => {
+    // Check which element is closest to the viewport
     var homeDist = Math.abs(ReactDOM.findDOMNode(document.getElementById("home")).getBoundingClientRect().y);
     var projectsDist = Math.abs(ReactDOM.findDOMNode(document.getElementById("projects")).getBoundingClientRect().y);
     var experienceDist = Math.abs(ReactDOM.findDOMNode(document.getElementById("experience")).getBoundingClientRect().y);
     var contactDist = Math.abs(ReactDOM.findDOMNode(document.getElementById("contact")).getBoundingClientRect().y);
 
+    // Set active tab accordingly
     if (homeDist < 60) {
       this.setActiveTab(0);
     } else if (projectsDist < 20) {
@@ -73,43 +76,46 @@ export default class App extends Component {
     }
   }
 
+  /**
+   * Bind "scroll" event to onScroll function.
+   */
   componentDidMount() {
     window.addEventListener("scroll", this.onScroll, false);
     this.isSmoothScrollSupported = 'scrollBehavior' in document.documentElement.style;
   }
 
+  /**
+   * Unbind "scroll" event from onScroll function.
+   */
   componentWillUnmount() {
     window.removeEventListener("scroll", this.onScroll, false);
   }
 
-  footerEnter = () => {
-    document.getElementById('footer-svg').classList.add('footer-svg-hover');
-    document.getElementById('footer-path').classList.add('footer-path-hover');
-  }
-
-  footerLeave = () => {
-    document.getElementById('footer-svg').classList.remove('footer-svg-hover');
-    document.getElementById('footer-path').classList.remove('footer-path-hover');
-  }
   render() {
     return (
       <>
-        <div style={{ overflowX: "hidden" }}>
-          <Splash onClickButton={i => this.setActiveTab(i)} scrollFunc={targ => this.scrollToTarget(targ)} />
-        </div>
-        <Navbar tabStates={this.state.tabStates} onClickTab={i => this.setActiveTab(i)} scrollFunc={targ => this.scrollToTarget(targ)} />
-        <div style={{ overflowX: "hidden" }}>
-          <Content />
-        </div>
-        <center style={{ backgroundColor: 'white', paddingTop: "10rem", paddingBottom: '11rem'}}>
-          <svg id="footer-svg" onMouseEnter={this.footerEnter} onMouseLeave={this.footerLeave} onClick={() => {this.setActiveTab(0); this.scrollToTarget('home');}} xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
-            <path id="footer-path" fill="#48c08c" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
-            <path fill="none" d="M0 0h24v24H0V0z" />
-          </svg>
-
-        </center>
-        {/* <div id="bottom-padding"></div> */}
+        <Splash onClickButton={i => this.setActiveTab(i)} scrollToTarget={id => this.scrollToTarget(id)} />
+        <Navbar tabStates={this.state.tabStates} onClickTab={i => this.setActiveTab(i)} scrollToTarget={id => this.scrollToTarget(id)} />
+        <Content />
+        <Footer onClickFooter={() => this.setActiveTab(0)} scrollToHome={() => this.scrollToTarget('home')} />
       </>
     );
   }
 }
+
+// Initialize WOW, a module that allows for revealing CSS animations as you scroll down a page
+var wow = new WOW.WOW(
+  {
+    boxClass: 'wow',      // animated element css class
+    animateClass: 'animated', // animation css class
+    offset: 0,          // distance to the element when triggering the animation 
+    mobile: false,      // don't trigger animations on mobile devices
+    live: true,       // act on asynchronously loaded content
+    callback: function (box) {
+      // the callback is fired every time an animation is started
+      // the argument that is passed in is the DOM node being animated
+    },
+    scrollContainer: null // optional scroll container selector, otherwise use window
+  }
+);
+wow.init();

@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './css/projectmodal.css';
 
+/**
+ * Modal dialog for a project
+ */
 export default class ProjectModal extends Component {
   constructor(props) {
     super(props);

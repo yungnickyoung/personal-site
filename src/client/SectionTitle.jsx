@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 
 import './css/sectiontitle.css'
 
+/**
+ * Title of Section in Content
+ */
 export default function SectionTitle(props) {
   return (
     <div>

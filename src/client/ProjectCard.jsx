@@ -18,7 +18,13 @@ const styles = theme => ({
   }
 });
 
+/**
+ * Card for a project. Uses Material UI
+ */
 class ProjectCard extends Component {
+  /**
+   * Initialize mouse hover state to false
+   */
   constructor(props) {
     super(props);
     this.state = {
@@ -26,12 +32,18 @@ class ProjectCard extends Component {
     };
   }
 
+  /**
+   * Set mouse hover state as true on mouse enter
+   */
   mouseEnter = () => {
     this.setState({
       isHover: true
     });
   }
 
+  /**
+   * Set mouse hover state as false on mouse leave
+   */
   mouseLeave = () => {
     this.setState({
       isHover: false
@@ -44,6 +56,7 @@ class ProjectCard extends Component {
 
     var imageClass = "card-image";
     var contentClass = "card-content";
+    
     if (isHover) {
       imageClass += " image-hover";
       contentClass += " card-content-hover";
@@ -60,7 +73,7 @@ class ProjectCard extends Component {
                 {this.props.tools.map((tool, i) => <div className="project-tool px-2 py-1" style={{ display: 'inline' }} key={i}>{tool}</div>)}
               </div>
               <div>
-                <a role="button" id={"btn-" + this.props.modalID}className="mt-4 btn btn-secondary" data-toggle="modal" data-target={"#" + this.props.modalID}>Learn more</a>
+                <a role="button" id={"btn-" + this.props.modalID} className="mt-4 btn btn-secondary" data-toggle="modal" data-target={"#" + this.props.modalID}>Learn more</a>
               </div>
             </div>
           </CardActionArea>

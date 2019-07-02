@@ -5,6 +5,9 @@ import './css/experience.css';
 import UltimateSoftwareExperienceImage from './assets/experience/ultimatesoftware.jpg';
 import UFExperienceImage from './assets/experience/uf.jpg';
 
+/**
+ * Experience section
+ */
 export default function Experience(props) {
   return (
     <div className="pb-5">

@@ -2,7 +2,9 @@ import React from 'react';
 import SectionTitle from './SectionTitle';
 import $ from 'jquery';
 
-// Contact form submission validation
+/**
+ * Validate contact form
+ */
 var handleSubmit = (event) => {
   event.preventDefault();
 
@@ -12,6 +14,7 @@ var handleSubmit = (event) => {
     return;
   }
 
+  // Submit contact form data to server
   fetch('/submit', {
     method: 'POST',
     mode: 'cors',
@@ -20,6 +23,7 @@ var handleSubmit = (event) => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify($('#contact-form').serializeArray()),
   }).then((res) => {
+    // Show message sent dialog
     document.getElementById('contactAlert').classList.remove("d-none");
     document.getElementById('contactAlert').classList.add("d-block");
     document.getElementById('contactAlert').classList.add("animated");
@@ -30,6 +34,9 @@ var handleSubmit = (event) => {
   });
 }
 
+/**
+ * Contact section
+ */
 export default function Contact(props) {
   return (
     <div style={{backgroundColor: 'white'}}>

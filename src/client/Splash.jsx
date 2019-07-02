@@ -2,18 +2,26 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Spinner from './Spinner';
 import './css/splash.css';
-import './css/sass.css';
 
+/**
+ * Welcome splash screen
+ */
 export default class Splash extends Component {
   constructor(props) {
     super(props);
   }
 
+  /**
+   * Animate the "See my portfolio" button on mouse enter
+   */
   buttonEnter = () => {
     document.getElementById('arrow-svg').classList.add('arrow-svg-hover');
     document.getElementById('svg-path').classList.add('svg-path-hover');
   }
 
+  /**
+   * Animate the "See my portfolio" button on mouse leave
+   */
   buttonLeave = () => {
     document.getElementById('arrow-svg').classList.remove('arrow-svg-hover');
     document.getElementById('svg-path').classList.remove('svg-path-hover');
@@ -21,7 +29,7 @@ export default class Splash extends Component {
 
   render() {
     return (
-      <>
+      <div style={{ overflowX: "hidden" }}>
         <div id="home" style={{ position: 'absolute', top: '0px', left: '0' }}></div>
 
         <div className="container-fluid height-100 px-0" style={{ overflow: "hidden" }}>
@@ -36,7 +44,7 @@ export default class Splash extends Component {
                   className="my-5 btn btn-outline-secondary btn-lg wow fadeIn delay-3s"
                   onClick={() => {
                     this.props.onClickButton(1);
-                    this.props.scrollFunc("projects");
+                    this.props.scrollToTarget("projects");
                   }}
                   onMouseEnter={this.buttonEnter}
                   onMouseLeave={this.buttonLeave}
@@ -54,12 +62,12 @@ export default class Splash extends Component {
             </div>
           </div>
         </div>
-      </>
+      </div>
     );
   }
 }
 
 Splash.propTypes = {
   onClickButton: PropTypes.func.isRequired,
-  scrollFunc: PropTypes.func.isRequired
+  scrollToTarget: PropTypes.func.isRequired
 };

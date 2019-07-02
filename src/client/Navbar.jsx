@@ -3,8 +3,12 @@ import PropTypes from 'prop-types';
 import Navlink from './Navlink';
 import './css/navbar.css';
 
+/**
+ * Sticky navbar at the top of the page
+ */
 export default function Navbar(props) {
   const states = props.tabStates;
+
   return (
     <>
       <nav className="navbar sticky-top navbar-expand navbar-dark" style={{ backgroundColor: "#1c2026", borderWidth: "0 0 8px", borderStyle: "solid", borderColor: "#48c08c" }}>
@@ -14,19 +18,19 @@ export default function Navbar(props) {
         <div className="d-none d-sm-flex container flex-column flex-md-row">
           <ul className="navbar-nav flex-row">
             <li className="nav-item px-1 px-md-3" key={0}>
-              <Navlink isActive={states[0]} text="HOME" onClick={() => { props.onClickTab(0); props.scrollFunc("home"); }} />
+              <Navlink isActive={states[0]} text="HOME" onClick={() => { props.onClickTab(0); props.scrollToTarget("home"); }} />
             </li>
             <li className="nav-item px-1 px-md-3" key={1}>
-              <Navlink isActive={states[1]} text="PORTFOLIO" onClick={() => { props.onClickTab(1); props.scrollFunc("projects"); }} />
+              <Navlink isActive={states[1]} text="PORTFOLIO" onClick={() => { props.onClickTab(1); props.scrollToTarget("projects"); }} />
             </li>
             {/* <li className="nav-item px-1 px-md-3" key={2}>
-              <Navlink isActive={states[2]} onClick={() => {this.props.onClickTab(2); this.props.scrollFunc("skills");}} text="Skills"/>
+              <Navlink isActive={states[2]} onClick={() => {this.props.onClickTab(2); this.props.scrollToTarget("skills");}} text="Skills"/>
             </li> */}
             <li className="nav-item px-1 px-md-3" key={3}>
-              <Navlink isActive={states[3]} text="EXPERIENCE" onClick={() => { props.onClickTab(3); props.scrollFunc("experience"); }} />
+              <Navlink isActive={states[3]} text="EXPERIENCE" onClick={() => { props.onClickTab(3); props.scrollToTarget("experience"); }} />
             </li>
             <li className="nav-item px-1 px-md-3" key={4}>
-              <Navlink isActive={states[4]} text="CONTACT" onClick={() => { props.onClickTab(4); props.scrollFunc("contact"); }} />
+              <Navlink isActive={states[4]} text="CONTACT" onClick={() => { props.onClickTab(4); props.scrollToTarget("contact"); }} />
             </li>
           </ul>
           <ul className="navbar-nav ml-none ml-md-auto flex-row d-none d-md-flex">
@@ -60,19 +64,19 @@ export default function Navbar(props) {
       <div className="collapse d-sm-none" id="navbarToggleExternalContent">
         <ul className="d-flex flex-column my-1 ml-2 p-0">
           <li className="px-1 px-md-3" data-toggle="collapse" data-target="#navbarToggleExternalContent" key={0}>
-            <Navlink isActive={states[0]} text="HOME" onClick={() => { props.onClickTab(0); props.scrollFunc("home"); }} />
+            <Navlink isActive={states[0]} text="HOME" onClick={() => { props.onClickTab(0); props.scrollToTarget("home"); }} />
           </li>
           <li className="px-1 px-md-3" data-toggle="collapse" data-target="#navbarToggleExternalContent" key={1}>
-            <Navlink isActive={states[1]} text="PORTFOLIO" onClick={() => { props.onClickTab(1); props.scrollFunc("projects"); }} />
+            <Navlink isActive={states[1]} text="PORTFOLIO" onClick={() => { props.onClickTab(1); props.scrollToTarget("projects"); }} />
           </li>
           {/* <li className="px-1 px-md-3" data-toggle="collapse" data-target="#navbarToggleExternalContent" key={2}>
-              <Navlink isActive={states[2]} onClick={() => {this.props.onClickTab(2); this.props.scrollFunc("skills");}} text="Skills"/>
+              <Navlink isActive={states[2]} onClick={() => {this.props.onClickTab(2); this.props.scrollToTarget("skills");}} text="Skills"/>
             </li> */}
           <li className="px-1 px-md-3" data-toggle="collapse" data-target="#navbarToggleExternalContent" key={3}>
-            <Navlink isActive={states[3]} text="EXPERIENCE" onClick={() => { props.onClickTab(3); props.scrollFunc("experience"); }} />
+            <Navlink isActive={states[3]} text="EXPERIENCE" onClick={() => { props.onClickTab(3); props.scrollToTarget("experience"); }} />
           </li>
           <li className="px-1 px-md-3" data-toggle="collapse" data-target="#navbarToggleExternalContent" key={4}>
-            <Navlink isActive={states[4]} text="CONTACT" onClick={() => { props.onClickTab(4); props.scrollFunc("contact"); }} />
+            <Navlink isActive={states[4]} text="CONTACT" onClick={() => { props.onClickTab(4); props.scrollToTarget("contact"); }} />
           </li>
         </ul>
       </div>
@@ -83,5 +87,5 @@ export default function Navbar(props) {
 Navbar.propTypes = {
   tabStates: PropTypes.array.isRequired,
   onClickTab: PropTypes.func.isRequired,
-  scrollFunc: PropTypes.func.isRequired
+  scrollToTarget: PropTypes.func.isRequired
 };

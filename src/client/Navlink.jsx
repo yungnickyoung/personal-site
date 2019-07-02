@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './css/navbar.css';
 
+/**
+ * Link in Navbar to anchor point
+ */
 export default function Navlink(props) {
   let linkClass = "nav-link py-2 menu-item";
   if (props.isActive) {

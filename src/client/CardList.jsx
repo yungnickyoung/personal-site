@@ -21,14 +21,18 @@ import VerCareModalImage3 from './assets/vercare/pic3.png';
 import LookingGlassCardImage from './assets/lookingglass/card-lookingglass.png';
 import LookingGlassModalImage1 from './assets/lookingglass/pic1.png';
 
+/**
+ * List of all the cards in the Projects section
+ */
 export default function CardList() {
-  // Disable card flip animations on safari due to bug with displaying modals 
+  // Disable card flip animations on Safari and Edge due to bug with displaying modals 
   var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
   var isEdge = /Edge/.test(navigator.userAgent);
   var animationClasses = "";
   if (!isSafari && !isEdge) {
     animationClasses = " wow flipInX";
   }
+  
   return (
     <div className="container">
       <div className="row justify-content-center">
