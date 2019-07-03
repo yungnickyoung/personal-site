@@ -36,28 +36,26 @@ export default class Splash extends Component {
           <div className="splash">
             <div className="row align-items-center justify-content-center height-100">
               <div className="col">
-                <div className="welcome-text px-3 wow bounce" style={{fontSize: "4rem"}}>Hi!</div>
-                <div className="welcome-text px-3 wow fadeIn delay-1s">My name is <span className="highlight">Nick Young</span></div>
-                <div className="sub-text px-3 pt-3 wow fadeIn delay-2s">I'm a <span className="highlight">full-stack</span> web &amp; software developer</div>
+                <div className="welcome-text px-3 wow bounce pb-2 pb-md-3" style={{fontSize: "calc(16px + 3vw"}}>Hi!</div>
+                <div className="welcome-text px-3 wow fadeIn pb-1 pb-md-2 delay-1s">My name is <span className="highlight">Nick Young</span></div>
+                <div className="sub-text px-3 wow fadeIn delay-2s">I'm a <span className="highlight">full-stack</span> web &amp; software developer</div>
                 <a
                   role="button"
-                  className="my-5 btn btn-outline-secondary btn-lg wow fadeIn delay-3s"
+                  className="mt-1 mt-md-3 mt-lg-4 btn btn-outline-secondary btn-lg wow fadeIn delay-3s"
                   onClick={() => {
                     this.props.onClickButton(1);
                     this.props.scrollToTarget("projects");
                   }}
                   onMouseEnter={this.buttonEnter}
                   onMouseLeave={this.buttonLeave}
+                  style={{fontSize: "calc(16px + 1vw)"}}
                 >
                   See my portfolio
-                  <svg id="arrow-svg" className="arrow-svg" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                  <svg id="arrow-svg" className="arrow-svg" xmlns="http://www.w3.org/2000/svg" width="calc(16px + 1vw)" height="calc(16px + 1vw)" viewBox="0 0 24 24">
                     <path id="svg-path" className="svg-path" fill="#48c08c" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
                     <path fill="none" d="M0 0h24v24H0V0z" />
                   </svg>
                 </a>
-                <div className="d-flex text-center justify-content-center">
-                  <Spinner />
-                </div>
               </div>
             </div>
           </div>
