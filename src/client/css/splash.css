@@ -48,6 +48,8 @@
     transition: transform 0.5s ease, top 0.5s ease;
     position: relative;
     top: -2px;
+    width: calc(16px + 1vw);
+    height: calc(16px + 1vw);
 }
 
 .splash .btn .arrow-svg path#svg-path {

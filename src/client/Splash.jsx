@@ -51,7 +51,7 @@ export default class Splash extends Component {
                   style={{fontSize: "calc(16px + 1vw)"}}
                 >
                   View my work
-                  <svg id="arrow-svg" className="arrow-svg" xmlns="http://www.w3.org/2000/svg" width="calc(16px + 1vw)" height="calc(16px + 1vw)" viewBox="0 0 24 24">
+                  <svg id="arrow-svg" className="arrow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path id="svg-path" className="svg-path" fill="#48c08c" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
                     <path fill="none" d="M0 0h24v24H0V0z" />
                   </svg>
