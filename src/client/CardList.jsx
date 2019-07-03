@@ -26,43 +26,43 @@ import LookingGlassModalImage1 from './assets/lookingglass/pic1.png';
  */
 export default function CardList() {
   // Disable card flip animations on Safari and Edge due to bug with displaying modals 
-  var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-  var isEdge = /Edge/.test(navigator.userAgent);
-  var animationClasses = "";
+  let isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  let isEdge = /Edge/.test(navigator.userAgent);
+  var colClasses = "col-12 col-sm-6 col-lg-4 my-2 d-flex justify-content-center";
   if (!isSafari && !isEdge) {
-    animationClasses = " wow flipInX";
+    colClasses += " wow flipInX";
   }
   
   return (
-    <div className="container">
-      <div className="row justify-content-center">
-        <div className={"col-12 col-md-6 col-lg-4 my-2" + animationClasses} data-wow-delay="1s">
+    <div className="container justify-content-center text-center">
+      <div className="row justify-content-center text-center">
+        <div className={colClasses} data-wow-delay="1s">
           <ProjectCard
             image={PersonalSiteCardImage}
             alt="Personal Website"
             cardTitle="Personal Website"
             modalID="personalsite"
             modalImages={[PersonalSiteImage1]}
-            tools={['Bootstrap', 'React.js', 'vis.js', 'SASS', 'Node.js', 'Express', 'AWS']}
+            tools={['Bootstrap', 'React.js', 'SASS', 'Node.js', 'Express', 'AWS']}
             cardDesc="Personal portfolio website built with React.js + Bootstrap on the frontend and Node.js + Express on the backend."
             buttonTitles={["GitHub Repo"]}
             buttonUrls={["https://github.com/yungnickyoung/personal-site"]}
           />
         </div>
-        <div className={"col-12 col-md-6 col-lg-4 my-2" + animationClasses} data-wow-delay="1.4s">
+        <div className={colClasses} data-wow-delay="1.4s">
           <ProjectCard
             image={JistCardImage}
             alt="JIST!"
-            cardTitle="JIST! [WIP]"
+            cardTitle="JIST!"
             modalID="jist"
             modalImages={[JistModalImage1, JistModalImage2]}
-            tools={['React Native', 'Flask', 'JavaScript', 'MySQL', 'Docker', 'GCP', 'Kubernetes']}
-            cardDesc="Mobile app that uses Natural Language Processing algorithms to automatically create summaries of news articles from various news sources. Supports 14+ top news sources from which the user can customize viewing preferences. In development."
+            tools={['Python', 'Java', 'Flask', 'Android', 'MySQL', 'Docker', 'GCP', 'K8s']}
+            cardDesc="Android app that uses Natural Language Processing algorithms to automatically create summaries of news articles from various news sources. Supports 14+ top news sources from which the user can customize viewing preferences. In development."
             buttonTitles={[]}
             buttonUrls={[]}
           />
         </div>
-        <div className={"col-12 col-md-6 col-lg-4 my-2" + animationClasses} data-wow-delay="1.8s">
+        <div className={colClasses} data-wow-delay="1.8s">
           <ProjectCard
             image={SmashStatsCardImage}
             alt="SmashStats"
@@ -75,20 +75,20 @@ export default function CardList() {
             buttonUrls={["https://github.com/yungnickyoung/SmashStats-Melee-Twitch-Extension", "https://www.twitch.tv/ext/807s6vsk4gkel6rx8zk7ys8jome5sj-0.0.1"]}
           />
         </div>
-        <div className={"col-12 col-md-6 col-lg-4 my-2" + animationClasses} data-wow-delay="2.2s">
+        <div className={colClasses} data-wow-delay="2.2s">
           <ProjectCard
             image={VerCareCardImage}
-            alt="VerCare [WIP]"
+            alt="VerCare"
             cardTitle="VerCare"
             modalID="vercare"
             modalImages={[VerCareModalImage1, VerCareModalImage2, VerCareModalImage3]}
             tools={['Bootstrap', 'jQuery', 'CSS', 'Flask', 'SQLite']}
-            cardDesc="Aggregates and compares medical procedure prices for nearby hospitals in order to help you find the perfect price. SwampHacks 2019 3rd place winner!"
+            cardDesc="Aggregates and compares medical procedure prices for nearby hospitals in order to help you find the perfect price. SwampHacks 2019 3rd place winner! In development."
             buttonTitles={["GitHub Repo"]}
             buttonUrls={["https://github.com/yungnickyoung/VerCare"]}
           />
         </div>
-        <div className={"col-12 col-md-6 col-lg-4 my-2" + animationClasses} data-wow-delay="2.6s">
+        <div className={colClasses} data-wow-delay="2.6s">
           <ProjectCard
             image={LookingGlassCardImage}
             alt="LookinGlass [WIP]"
@@ -96,7 +96,7 @@ export default function CardList() {
             modalID="lookingglass"
             modalImages={[LookingGlassModalImage1]}
             tools={['Java', 'JNA', 'C++']}
-            cardDesc="Windows 10 window management software that allows users to control windows in pre-set or custom-made arrangements and patterns with user-defined hotkeys. Uses Java Native Access (JNA) to invoke native code for handling keyboard event listening and window size &amp; position management."
+            cardDesc="Windows 10 window management software that allows users to control windows in pre-set or custom-made arrangements and patterns with user-defined hotkeys. Uses Java Native Access (JNA) to invoke native code for handling keyboard event listening and window size &amp; position management. In development."
             buttonTitles={["GitHub Repo"]}
             buttonUrls={["https://github.com/yungnickyoung/LookinGlass"]}
           />

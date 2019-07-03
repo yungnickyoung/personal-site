@@ -1,11 +1,12 @@
 .card-base {
+    color: #000000 !important;
     background-color: #000000 !important;
 }
 
 .card-image {
     transition: opacity 0.2s !important;
     -webkit-transition: opacity 0.2s !important;
-    opacity: 1 !important;
+    opacity: 1;
 }
 
 .image-hover {
@@ -13,8 +14,7 @@
 }
 
 .card-content {
-    position: absolute;
-    top: 20%;
+    top: 10%;
     width: 100%;
     text-align: center;
     opacity: 0 !important;
@@ -30,7 +30,7 @@
     letter-spacing: 0px;
     line-height: 150%;
     font-family: 'Rubik', sans-serif;
-    font-size: 1.5rem;
+    font-size: calc(8px + .5vw + 1vh);
     font-weight: 700;
     color: #d8e3e2;
     margin-bottom: 0px !important;
@@ -40,13 +40,22 @@
     letter-spacing: 0px;
     line-height: 100%;
     font-family: 'Rubik', sans-serif;
-    font-size: 1rem;
+    font-size: calc(7px + .4vw + .5vh);
     color: #48c08c;
+    border-radius: 25px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #48c08c;
 }
 
 .card-content .btn {
     font-family: 'Rubik', sans-serif;
     color: white !important;
     position: relative; 
+    font-size: calc(8px + .4vw + .5vh);
+}
+
+.card-content .btn:hover { 
+    cursor: pointer;
 }
 
