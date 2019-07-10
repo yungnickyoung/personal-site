@@ -58,7 +58,7 @@ export default function Contact(props) {
       </div>
       <div className="row justify-content-center">
         <div className="col-12 col-md-8 col-lg-6 col-xl-4 md-auto justify-content-center text-center wow fadeIn" data-wow-delay="1.6s">
-          <form className="needs-validation mx-3 mx-md-0 wow bounceIn" data-wow-delay="1.5s" data-wow-duration="1s" id="contact-form" onSubmit={handleSubmit} noValidate>
+          <form className="needs-validation mx-3 mx-md-0 wow zoomIn" data-wow-delay="1.5s" data-wow-duration=".6s" id="contact-form" onSubmit={handleSubmit} noValidate>
             <div className="form-group">
               <input type="text" className="form-control" id="nameInput" name="senderName" placeholder="Name (required)" required />
               <div className="invalid-feedback">
