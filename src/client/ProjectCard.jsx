@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ProjectModal from './ProjectModal';
 
 import './css/projectcard.css';
 
@@ -38,7 +37,6 @@ export default class ProjectCard extends Component {
   }
 
   render() {
-    const { classes } = this.props;
     var isHover = this.state.isHover;
 
     var imageClass = "card-img card-image";
@@ -53,8 +51,8 @@ export default class ProjectCard extends Component {
       <>
         <div className="card" onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave}>
           <div className="card-base">
-            <img className={imageClass} src={this.props.image} alt={this.props.alt} title={this.props.alt} />
-            <div className="card-img-overlay" style={{padding: '.1rem'}}>
+            <img className={imageClass} src={require(`${this.props.image}`)} alt={this.props.alt} title={this.props.alt} />
+            <div className="card-img-overlay" style={{ padding: '.1rem' }}>
               <div className={contentClass} >
                 <div className="px-2 pt-md-3 card-title">{this.props.cardTitle}</div>
                 <div className="d-flex flex-row justify-content-center mx-1 mx-md-2" style={{ flexWrap: 'wrap' }}>
@@ -67,31 +65,17 @@ export default class ProjectCard extends Component {
             </div>
           </div>
         </div>
-
-        <ProjectModal
-        id={this.props.modalID}
-        title={this.props.cardTitle}
-        images={this.props.modalImages}
-        alt={this.props.alt}
-        desc={this.props.cardDesc}
-        buttonTitles={this.props.buttonTitles}
-        buttonUrls={this.props.buttonUrls}
-      />
       </>
     );
   }
 }
 
 ProjectCard.propTypes = {
-  classes: PropTypes.object.isRequired,
   image: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
   cardTitle: PropTypes.string.isRequired,
   cardDesc: PropTypes.string.isRequired,
   tools: PropTypes.array.isRequired,
-  modalID: PropTypes.string.isRequired,
-  modalImages: PropTypes.array.isRequired,
-  buttonTitles: PropTypes.array.isRequired,
-  buttonUrls: PropTypes.array.isRequired
+  modalID: PropTypes.string.isRequired
 };
 

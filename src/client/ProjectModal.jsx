@@ -18,8 +18,22 @@ export default class ProjectModal extends Component {
 
     // Create carousel images and indicators
     for (var i = 0; i < this.props.images.length; i++) {
-      carouselIndicators.push(<li data-target={"#" + carouselID} data-slide-to={"" + i} key={i} className={i == 0 ? "active" : ""}></li>)
-      carouselImages.push(<div className={"carousel-item" + (i == 0 ? " active" : "")} key={i}><img src={this.props.images[i]} className="d-block w-100" alt={this.props.alt} /></div>)
+      carouselIndicators.push(
+        <li
+          data-target={"#" + carouselID}
+          data-slide-to={"" + i} key={i}
+          className={i == 0 ? "active" : ""}>
+        </li>
+      );
+
+      carouselImages.push(
+        <div className={"carousel-item" + (i == 0 ? " active" : "")} key={i}>
+          <img
+            src={require(`${this.props.images[i]}`)}
+            className="d-block w-100"
+            alt={this.props.alt} />
+        </div>
+      );
     }
 
     // Create buttons for links to repos and other project URLs
@@ -32,7 +46,7 @@ export default class ProjectModal extends Component {
           </svg>
           {" " + title}
         </a>
-      )  
+      )
     });
 
     return (
@@ -57,11 +71,11 @@ export default class ProjectModal extends Component {
                 </a>
               </div>
               <h2 style={{ fontWeight: '700', fontSize: '2rem' }} className="mt-3 px-4">{this.props.title}</h2>
-                <div className="mx-4 mt-1 mb-4" style={{ height: '4px', backgroundColor: '#48c08c' }}></div>
+              <div className="mx-4 mt-1 mb-4" style={{ height: '4px', backgroundColor: '#48c08c' }}></div>
               <p className="px-4">{this.props.desc}</p>
 
             </div>
-            <div className="modal-footer" style={{justifyContent: 'space-between'}}>
+            <div className="modal-footer" style={{ justifyContent: 'space-between' }}>
               <div>
                 {buttons}
               </div>

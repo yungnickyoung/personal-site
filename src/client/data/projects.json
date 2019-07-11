@@ -1,0 +1,60 @@
+{
+    "projects": 
+    [
+        {
+            "image": "./assets/personalsite/card-personalsite.png",
+            "alt": "Personal Website",
+            "cardTitle": "Personal Website",
+            "modalID": "personalsite",
+            "modalImages": ["./assets/personalsite/personalsite1.png"],
+            "tools": ["Bootstrap", "React.js", "SASS", "Node.js", "Express", "AWS"],
+            "cardDesc": "Personal portfolio website built with React.js + Bootstrap on the frontend and Node.js + Express on the backend.",
+            "buttonTitles": ["GitHub Repo"],
+            "buttonUrls": ["https://github.com/yungnickyoung/personal-site"]
+        },
+        {
+            "image": "./assets/jist/card-jist.png",
+            "alt": "JIST!",
+            "cardTitle": "JIST!",
+            "modalID": "jist",
+            "modalImages": ["./assets/jist/jist1.png", "./assets/jist/jist2.png"],
+            "tools": ["Python", "Java", "Flask", "Android", "MySQL", "Docker", "GCP", "K8s"],
+            "cardDesc": "Android app that uses Natural Language Processing algorithms to automatically create summaries of news articles from various news sources. Supports 14+ top news sources from which the user can customize viewing preferences. In development.",
+            "buttonTitles": [],
+            "buttonUrls": []
+        },
+        {
+            "image": "./assets/smashstats/card-smashstats.png",
+            "alt": "SmashStats",
+            "cardTitle": "SmashStats Twitch Extension",
+            "modalID": "smashstats",
+            "modalImages": ["./assets/smashstats/smashstats1.png", "./assets/smashstats/smashstats2.png", "./assets/smashstats/smashstats3.png"],
+            "tools": ["jQuery", "CSS", "Flask", "AWS"],
+            "cardDesc": "Twitch Extension that provides data for player matchups during Super Smash Bros. Melee tournament streams. Utilizes JWTs with a Twitch-provided shared secret to authenticate communication with Twitch's PubSub service. Currently live on the Twitch Extension Marketplace!",
+            "buttonTitles": ["GitHub Repo", "View on Twitch"],
+            "buttonUrls": ["https://github.com/yungnickyoung/SmashStats-Melee-Twitch-Extension", "https://www.twitch.tv/ext/807s6vsk4gkel6rx8zk7ys8jome5sj-0.0.1"]
+        },
+        {
+            "image": "./assets/vercare/card-vercare.png",
+            "alt": "VerCare",
+            "cardTitle": "VerCare",
+            "modalID": "vercare",
+            "modalImages": ["./assets/vercare/vercare1.png", "./assets/vercare/vercare2.png", "./assets/vercare/vercare3.png"],
+            "tools": ["Bootstrap", "jQuery", "CSS", "Flask", "SQLite"],
+            "cardDesc": "Aggregates and compares medical procedure prices for nearby hospitals in order to help you find the perfect price. SwampHacks 2019 3rd place winner! In development.",
+            "buttonTitles": ["GitHub Repo"],
+            "buttonUrls": ["https://github.com/yungnickyoung/VerCare"]
+        },
+        {
+            "image": "./assets/lookinglass/card-lookinglass.png",
+            "alt": "LookinGlass",
+            "cardTitle": "LookinGlass",
+            "modalID": "lookinglass",
+            "modalImages": ["./assets/lookinglass/lookinglass1.png"],
+            "tools": ["Java", "JNA", "C++"],
+            "cardDesc": "Windows 10 window management software that allows users to control windows in pre-set or custom-made arrangements and patterns with user-defined hotkeys. Uses Java Native Access (JNA) to invoke native code for handling keyboard event listening and window size &amp; position management. In development.",
+            "buttonTitles": ["GitHub Repo"],
+            "buttonUrls": ["https://github.com/yungnickyoung/LookinGlass"]
+        }
+    ]
+}

@@ -4,10 +4,13 @@ import Navbar from './Navbar';
 import Content from './Content';
 import Splash from './Splash';
 import Footer from './Footer';
+import ModalList from './ModalList';
 import WOW from 'wowjs';
 
 import './css/app.css';
 import './css/sass.css';
+
+
 
 /**
  * My personal website, at www.yungnickyoung.com
@@ -98,6 +101,7 @@ export default class App extends Component {
         <Navbar tabStates={this.state.tabStates} onClickTab={i => this.setActiveTab(i)} scrollToTarget={id => this.scrollToTarget(id)} />
         <Content />
         <Footer onClickFooter={() => this.setActiveTab(0)} scrollToHome={() => this.scrollToTarget('home')} />
+        <ModalList />
       </>
     );
   }
