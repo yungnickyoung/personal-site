@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');          // Allows for base HTML template
-const CleanWebpackPlugin = require('clean-webpack-plugin');        // Cleans output dir every build
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');        // Cleans output dir every build
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');   // Extracts CSS into separate files.
                                                                    // Creates a CSS file per JS file which contains CSS
 const outputDirectory = 'dist';
@@ -22,7 +22,7 @@ module.exports = {
     filename: '[name].bundle.js'
   },
   plugins: [
-    new CleanWebpackPlugin([outputDirectory]),
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './public/index.html',
       favicon: './public/favicon.ico'

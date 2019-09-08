@@ -2,6 +2,17 @@
     "projects": 
     [
         {
+            "image": "./assets/bettercaves/card-bettercaves.png",
+            "alt": "Better Caves",
+            "cardTitle": "Better Caves",
+            "modalID": "bettercaves",
+            "modalImages": ["./assets/bettercaves/bettercaves1.png", "./assets/bettercaves/bettercaves2.png", "./assets/bettercaves/bettercaves3.png", "./assets/bettercaves/bettercaves4.png"],
+            "tools": ["Java", "Gradle"],
+            "cardDesc": "Minecraft mod that overhauls cave generation to make caves much more diverse and exciting. Uses simplex noise, cubic noise, and Perlin noise for procedural cave generation.",
+            "buttonTitles": ["GitHub Repo", "CurseForge Post"],
+            "buttonUrls": ["https://github.com/yungnickyoung/yungs-better-caves", "https://www.curseforge.com/minecraft/mc-mods/yungs-better-caves"]
+        },
+        {
             "image": "./assets/personalsite/card-personalsite.png",
             "alt": "Personal Website",
             "cardTitle": "Personal Website",
