@@ -23,11 +23,10 @@ export default function CardList() {
       <div className="row justify-content-center text-center">
         {
           projectData.map((project, i) =>
-            <div className={colClasses} data-wow-delay={(1 + i * .1) + "s"}>
+            <div className={colClasses} data-wow-delay={(1 + i * .1) + "s"} key={`${project.modalID}-div`}>
               <div className="wow fadeIn" data-wow-delay={(1.2 + i * .1) + "s"}>
                 <ProjectCard 
                   image={project.image}
-                  alt={project.alt}
                   cardTitle={project.cardTitle}
                   cardDesc={project.cardDesc}
                   tools={project.tools}

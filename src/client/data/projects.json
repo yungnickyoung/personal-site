@@ -2,19 +2,37 @@
     "projects": 
     [
         {
+            "image": "./assets/betterstrongholds/card-betterstrongholds.png",
+            "cardTitle": "Better Strongholds",
+            "modalID": "betterstrongholds",
+            "modalImages": ["./assets/betterstrongholds/betterstrongholds1.png", "./assets/betterstrongholds/betterstrongholds2.png", "./assets/betterstrongholds/betterstrongholds3.png", "./assets/betterstrongholds/betterstrongholds4.png"],
+            "tools": ["Java", "Gradle"],
+            "cardDesc": "Minecraft mod that completely redesigns Strongholds, an end-game dungeon, to be massive, tile-based procedurally generated dungeons. Includes 15+ new rooms, various types of hallways, staircases, traps, and even hidden areas!",
+            "buttonTitles": ["GitHub Repo", "CurseForge Post"],
+            "buttonUrls": ["https://github.com/yungnickyoung/yungs-better-strongholds", "https://www.curseforge.com/minecraft/mc-mods/yungs-better-strongholds"]
+        },
+        {
+            "image": "./assets/bettermineshafts/card-bettermineshafts.png",
+            "cardTitle": "Better Mineshafts",
+            "modalID": "bettermineshafts",
+            "modalImages": ["./assets/bettermineshafts/bettermineshafts1.png", "./assets/bettermineshafts/bettermineshafts2.png", "./assets/bettermineshafts/bettermineshafts3.png", "./assets/bettermineshafts/bettermineshafts4.png"],
+            "tools": ["Java", "Gradle"],
+            "cardDesc": "Minecraft mod that introduces procedurally generated structures that are much more interesting than those originally in the game, changing them from boring straight lines into dynamic, varied webs of tunnels. Features 9 built-in environment-dependent dungeon variants with an extensive, fully JSON-driven user configuration.",
+            "buttonTitles": ["GitHub Repo", "CurseForge Post"],
+            "buttonUrls": ["https://github.com/yungnickyoung/yungs-better-mineshafts", "https://www.curseforge.com/minecraft/mc-mods/yungs-better-mineshafts-forge"]
+        },
+        {
             "image": "./assets/bettercaves/card-bettercaves.png",
-            "alt": "Better Caves",
             "cardTitle": "Better Caves",
             "modalID": "bettercaves",
             "modalImages": ["./assets/bettercaves/bettercaves1.png", "./assets/bettercaves/bettercaves2.png", "./assets/bettercaves/bettercaves3.png", "./assets/bettercaves/bettercaves4.png"],
             "tools": ["Java", "Gradle"],
-            "cardDesc": "Minecraft mod that overhauls cave generation to make caves much more diverse and exciting. Uses simplex noise, cubic noise, and Perlin noise for procedural cave generation.",
+            "cardDesc": "Minecraft mod that overhauls cave generation to make caves much more diverse and exciting. Features my own original algorithm that utilizes Simplex, Cellular (Worley), and Cubic Value noises for procedural cave generation.",
             "buttonTitles": ["GitHub Repo", "CurseForge Post"],
             "buttonUrls": ["https://github.com/yungnickyoung/yungs-better-caves", "https://www.curseforge.com/minecraft/mc-mods/yungs-better-caves"]
         },
         {
             "image": "./assets/personalsite/card-personalsite.png",
-            "alt": "Personal Website",
             "cardTitle": "Personal Website",
             "modalID": "personalsite",
             "modalImages": ["./assets/personalsite/personalsite1.png"],
@@ -25,7 +43,6 @@
         },
         {
             "image": "./assets/jist/card-jist.png",
-            "alt": "JIST!",
             "cardTitle": "JIST!",
             "modalID": "jist",
             "modalImages": ["./assets/jist/jist1.png", "./assets/jist/jist2.png"],
@@ -47,7 +64,6 @@
         },
         {
             "image": "./assets/vercare/card-vercare.png",
-            "alt": "VerCare",
             "cardTitle": "VerCare",
             "modalID": "vercare",
             "modalImages": ["./assets/vercare/vercare1.png", "./assets/vercare/vercare2.png", "./assets/vercare/vercare3.png"],
@@ -58,7 +74,6 @@
         },
         {
             "image": "./assets/lookinglass/card-lookinglass.png",
-            "alt": "LookinGlass",
             "cardTitle": "LookinGlass",
             "modalID": "lookinglass",
             "modalImages": ["./assets/lookinglass/lookinglass1.png"],

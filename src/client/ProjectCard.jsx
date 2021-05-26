@@ -49,17 +49,14 @@ export default class ProjectCard extends Component {
 
     return (
       <>
-        <div className="card" onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave}>
+        <div className="card" onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave} data-toggle="modal" data-target={"#" + this.props.modalID}>
           <div className="card-base">
-            <img className={imageClass} src={require(`${this.props.image}`)} alt={this.props.alt} title={this.props.alt} />
+            <img className={imageClass} src={require(`${this.props.image}`)} alt={this.props.cardTitle} title={this.props.cardTitle} />
             <div className="card-img-overlay" style={{ padding: '.1rem' }}>
               <div className={contentClass} >
                 <div className="px-2 pt-md-3 card-title">{this.props.cardTitle}</div>
                 <div className="d-flex flex-row justify-content-center mx-1 mx-md-2" style={{ flexWrap: 'wrap' }}>
                   {this.props.tools.map((tool, i) => <div className="project-tool mx-1 my-1 px-2 py-1" style={{ display: 'inline' }} key={i}>{tool}</div>)}
-                </div>
-                <div>
-                  <a role="button" id={"btn-" + this.props.modalID} className="mt-2 mt-md-4 btn btn-secondary" data-toggle="modal" data-target={"#" + this.props.modalID}>Learn more</a>
                 </div>
               </div>
             </div>
@@ -72,7 +69,6 @@ export default class ProjectCard extends Component {
 
 ProjectCard.propTypes = {
   image: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
   cardTitle: PropTypes.string.isRequired,
   cardDesc: PropTypes.string.isRequired,
   tools: PropTypes.array.isRequired,

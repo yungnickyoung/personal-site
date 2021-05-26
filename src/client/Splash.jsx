@@ -36,9 +36,9 @@ export default class Splash extends Component {
           <div className="splash">
             <div className="row align-items-center justify-content-center height-100">
               <div className="col">
-                <div className="welcome-text px-3 wow bounce pb-2 pb-md-3" style={{fontSize: "calc(16px + 3vw"}}>Hi!</div>
-                <div className="welcome-text px-3 wow fadeIn pb-1 pb-md-2 delay-1s">My name is <span className="highlight">Nick Young</span>.</div>
-                <div className="sub-text px-3 wow fadeIn delay-2s">I'm a <span className="highlight">full-stack</span> web &amp; software developer.</div>
+                <div className="welcome-text px-3 wow bounce pb-2 pb-md-4" style={{fontSize: "calc(16px + 3vw"}}>Hi!</div>
+                <div className="welcome-text px-3 wow fadeIn pb-1 pb-md-3 delay-1s">My name is <span className="highlight">Nick Young</span>, a.k.a. <span className="highlight">YUNG</span>.</div>
+                <div className="sub-text px-3 wow fadeIn pb-md-4 delay-2s">I am a <span className="highlight">software developer</span> and well-known <span className="highlight">Minecraft Modder</span>.</div>
                 <a
                   role="button"
                   className="mt-1 mt-md-3 mt-lg-4 btn btn-outline-secondary btn-lg wow fadeIn delay-3s"

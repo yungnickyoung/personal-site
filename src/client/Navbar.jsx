@@ -35,6 +35,53 @@ export default function Navbar(props) {
           </ul>
           <ul className="navbar-nav ml-none ml-md-auto flex-row d-none d-md-flex">
             <li className="nav-item">
+              <a className="nav-link py-2 icon" href="https://twitter.com/yungnickyoung" target="_blank" rel="noopener" aria-label="Twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" style={{ display: "inline-block", width: "1.5rem", height: "1.5rem", verticalAlign: "text-top" }} viewBox="0 0 512 499.36" role="img" focusable="false">
+                  <title>Twitter</title>
+                  <path
+                    fill="currentColor"
+                    fillRule="evenodd"                  
+                    d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+                       c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+                       c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+                       c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+                       c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+                       c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+                       C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+                       C480.224,136.96,497.728,118.496,512,97.248z"/>
+                </svg>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link py-2 icon" href="https://www.youtube.com/c/YUNGNICKYOUNG/" target="_blank" rel="noopener" aria-label="YouTube">
+                <svg xmlns="http://www.w3.org/2000/svg" style={{ display: "inline-block", width: "1.5rem", height: "1.5rem", verticalAlign: "text-top" }} viewBox="0 0 16 16" role="img" focusable="false">
+                  <title>YouTube</title>
+                  <path
+                    fill="currentColor"
+                    fillRule="evenodd"
+                    d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.122C.002 7.343.01 6.6.064 5.78l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link py-2 icon" href="https://discord.gg/rns3beq" target="_blank" rel="noopener" aria-label="Discord">
+                <svg xmlns="http://www.w3.org/2000/svg" style={{ display: "inline-block", width: "1.5rem", height: "1.5rem", verticalAlign: "text-top" }} viewBox="0 0 16 16" role="img" focusable="false">
+                  <title>Discord</title>
+                  <path
+                    fill="currentColor"
+                    fillRule="evenodd"
+                    d="M6.552 6.712c-.456 0-.816.4-.816.888s.368.888.816.888c.456 0 .816-.4.816-.888.008-.488-.36-.888-.816-.888zm2.92 0c-.456 0-.816.4-.816.888s.368.888.816.888c.456 0 .816-.4.816-.888s-.36-.888-.816-.888z"
+                  />
+                  <path
+                    fill="currentColor"
+                    fillRule="evenodd"
+                    d="M13.36 0H2.64C1.736 0 1 .736 1 1.648v10.816c0 .912.736 1.648 1.64 1.648h9.072l-.424-1.48 1.024.952.968.896L15 16V1.648C15 .736 14.264 0 13.36 0zm-3.088 10.448s-.288-.344-.528-.648c1.048-.296 1.448-.952 1.448-.952-.328.216-.64.368-.92.472-.4.168-.784.28-1.16.344a5.604 5.604 0 0 1-2.072-.008 6.716 6.716 0 0 1-1.176-.344 4.688 4.688 0 0 1-.584-.272c-.024-.016-.048-.024-.072-.04-.016-.008-.024-.016-.032-.024-.144-.08-.224-.136-.224-.136s.384.64 1.4.944c-.24.304-.536.664-.536.664-1.768-.056-2.44-1.216-2.44-1.216 0-2.576 1.152-4.664 1.152-4.664 1.152-.864 2.248-.84 2.248-.84l.08.096c-1.44.416-2.104 1.048-2.104 1.048s.176-.096.472-.232c.856-.376 1.536-.48 1.816-.504.048-.008.088-.016.136-.016a6.521 6.521 0 0 1 4.024.752s-.632-.6-1.992-1.016l.112-.128s1.096-.024 2.248.84c0 0 1.152 2.088 1.152 4.664 0 0-.68 1.16-2.448 1.216z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li className="nav-item">
               <a className="nav-link py-2 icon" href="https://github.com/yungnickyoung" target="_blank" rel="noopener" aria-label="GitHub">
                 <svg xmlns="http://www.w3.org/2000/svg" style={{ display: "inline-block", width: "1.5rem", height: "1.5rem", verticalAlign: "text-top" }} viewBox="0 0 512 499.36" role="img" focusable="false">
                   <title>GitHub</title>

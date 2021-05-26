@@ -13,6 +13,10 @@
     opacity: .1 !important;
 }
 
+.card:hover {
+    cursor: pointer;
+}
+
 .card-content {
     top: 10%;
     width: 100%;

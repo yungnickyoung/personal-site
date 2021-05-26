@@ -2,6 +2,7 @@ import React from 'react';
 import SectionTitle from './SectionTitle';
 import './css/experience.css';
 
+import ImarcsGroupExperienceImage from './assets/experience/img2.png';
 import UltimateSoftwareExperienceImage from './assets/experience/ultimatesoftware.jpg';
 import UFExperienceImage from './assets/experience/uf.jpg';
 
@@ -27,6 +28,29 @@ export default function Experience(props) {
       <div className="row justify-content-md-center text-center mx-0 mx-md-3 mx-lg-5 pb-md-5">
         <div className="col-12 col-md-4 col-lg mb-3 mb-lg-0 text-md-right">
           <div className="wow fadeIn" data-wow-delay="1.1s">
+            <img className="experience-image wow fadeInRight" data-wow-delay=".7s" src={ImarcsGroupExperienceImage} alt="ImarcsGroup" />
+          </div>
+        </div>
+        <div className="col-12 col-md-7 col-lg-6 pb-5 pb-md-0 text-center text-md-left">
+          <div className="wow fadeIn" data-wow-delay="1.3s">
+            <div className="wow fadeInRight" data-wow-delay=".9s" data-wow-duration="1s">
+              <div className="experience-title">ImarcsGroup</div>
+              <div className="experience-subtitle mx-md-1">Software Engineer, Full-Stack Web Developer</div>
+            </div>
+          </div>
+          <div className="experience-content px-sm-5 px-md-4">
+            <ul className="experience-list text-left">
+              <li className="wow fadeIn" data-wow-delay="1.4s"><div className="dot"></div><span>Singlehandedly spearheaded <span className="highlight">DevOps</span> system for automating builds and test suites across different environments with <span className="highlight">Jenkins</span>.</span></li>
+              <li className="wow fadeIn" data-wow-delay="1.5s"><div className="dot"></div><span>Led development of backoffice website. Implemented <span className="highlight">token-based authentication</span> and <span className="highlight">role-based authorization</span> systems. <span className="highlight">React, Bootstrap, GraphQL, Postgres, Apache</span></span></li>
+              <li className="wow fadeIn" data-wow-delay="1.6s"><div className="dot"></div><span>Wrote <span className="highlight">unit tests</span> for multiple APIs and in-house reporting services. <span className="highlight">Mocha, Chai, Sinon</span></span></li>
+            </ul>
+          </div>
+        </div>
+        <div className="col-md-1 col-lg-2"></div>
+      </div>
+      <div className="row justify-content-md-center text-center mx-0 mx-md-3 mx-lg-5 pb-md-5">
+        <div className="col-12 col-md-4 col-lg mb-3 mb-lg-0 text-md-right">
+          <div className="wow fadeIn" data-wow-delay="1.1s">
             <img className="experience-image wow fadeInRight" data-wow-delay=".7s" src={UltimateSoftwareExperienceImage} alt="Ultimate Software" />
           </div>
         </div>
@@ -34,7 +58,7 @@ export default function Experience(props) {
           <div className="wow fadeIn" data-wow-delay="1.3s">
             <div className="wow fadeInRight" data-wow-delay=".9s" data-wow-duration="1s">
               <div className="experience-title">Ultimate Software</div>
-              <div className="experience-subtitle mx-md-1">TECHSTAR INTERN - IDENTITY TEAM</div>
+              <div className="experience-subtitle mx-md-1">TECHSTAR Intern - Identity Team</div>
             </div>
           </div>
           <div className="experience-content px-sm-5 px-md-4">
@@ -58,7 +82,7 @@ export default function Experience(props) {
           <div className="wow fadeIn" data-wow-delay="1.6s">
             <div className="wow fadeInRight" data-wow-delay="1.2s">
               <div className="experience-title">UF Machine Learning &amp; Sensing Lab</div>
-              <div className="experience-subtitle mx-md-1">UNDERGRADUATE RESEARCHER</div>
+              <div className="experience-subtitle mx-md-1">Undergraduate Researcher</div>
             </div>
           </div>
           <div className="experience-content px-sm-5 px-md-4">
